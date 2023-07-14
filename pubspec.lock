@@ -334,14 +334,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.0+1"
-  flutter_spinkit:
-    dependency: "direct main"
-    description:
-      name: flutter_spinkit
-      sha256: b39c753e909d4796906c5696a14daf33639a76e017136c8d82bf3e620ce5bb8e
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.2.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -352,14 +344,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  formz:
-    dependency: "direct main"
-    description:
-      name: formz
-      sha256: b2b4cb99b228020d2c7185500eed1c02ca290dd4cc19edaf42df17f5dc546d5a
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.6.0"
   freezed:
     dependency: "direct dev"
     description:

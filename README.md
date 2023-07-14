@@ -1,6 +1,22 @@
 # youapp_test
 
-A new Flutter project.
+## DDD Pattern
+
+using:
+
+- [bloc]
+- [build_runner]
+- [auto_route]
+- [dio]
+- [alice]
+- [http]
+- [dartz]
+- [flutter_bloc]
+- [freezed_annotation]
+- [get_it]
+- [injectable]
+- [json_annotation]
+- [logger]
 
 ## Getting Started
 

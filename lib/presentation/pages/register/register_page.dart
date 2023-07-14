@@ -69,7 +69,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height,
                       color: state.isSubmitting
-                          ? Colors.black.withOpacity(0.8)
+                          ? Colors.black.withOpacity(0.4)
                           : Colors.transparent,
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -244,6 +244,7 @@ class FormInputConfirmPassword extends StatelessWidget {
               .value
               .fold(
                   (l) => l.maybeMap(
+                        empty: (value) => 'Cannot empty',
                         invalidPassword: (value) =>
                             'Password must be 8 characters',
                         orElse: () => null,
@@ -261,6 +262,7 @@ class FormInputConfirmPassword extends StatelessWidget {
                   ? 'Password not matches with password created'
                   : state.registerForm.passwordConfirm!.value.fold(
                       (l) => l.maybeMap(
+                            empty: (value) => 'Cannot empty',
                             invalidPassword: (value) =>
                                 'Password must be 8 characters',
                             orElse: () => null,
@@ -313,6 +315,7 @@ class FormInputCreatePassword extends StatelessWidget {
               .value
               .fold(
                   (l) => l.maybeMap(
+                        empty: (value) => 'Cannot empty',
                         invalidPassword: (value) =>
                             'Password must be 8 characters',
                         orElse: () => null,
@@ -327,6 +330,7 @@ class FormInputCreatePassword extends StatelessWidget {
           decoration: InputDecoration(
               errorText: state.registerForm.password!.value.fold(
                   (l) => l.maybeMap(
+                        empty: (value) => 'Cannot empty',
                         invalidPassword: (value) =>
                             'Password must be 8 characters',
                         orElse: () => null,

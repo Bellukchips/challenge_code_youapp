@@ -1,11 +1,12 @@
 import 'package:alice/alice.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:injectable/injectable.dart';
 import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:youapp_test/presentation/router/app_route.dart';
 import 'package:youapp_test/shared/config.dart';
-import 'package:http/http.dart' as http;
 
 @module
 abstract class RegisterModules {
@@ -22,6 +23,7 @@ abstract class RegisterModules {
         ),
         output: null, //
       );
+
   @lazySingleton
   AppRouter get appRouter => AppRouter();
 
@@ -30,7 +32,6 @@ abstract class RegisterModules {
       Alice(navigatorKey: appRouter.navigatorKey, showNotification: false);
 
   @preResolve
-  @lazySingleton
   Future<SharedPreferences> get sharedPreferences =>
       SharedPreferences.getInstance();
 
@@ -49,7 +50,7 @@ abstract class RegisterModules {
 
     final _client = Dio(options);
     _client.interceptors.addAll([
-      RequestInterceptor(),
+      RequestInterceptor(sharedPreferences),
       ResponseInterceptor(),
       InterceptorsWrapper(),
       alice.getDioInterceptor()
@@ -66,14 +67,25 @@ class ResponseInterceptor extends Interceptor {
   void onError(DioError err, ErrorInterceptorHandler handler) {
     if (err.response?.statusCode == 401) {
       // Automatically logout or refresh token
+      debugPrint('TOKEN REVOKED');
     }
     super.onError(err, handler);
   }
 }
 
 class RequestInterceptor extends Interceptor {
+  final SharedPreferences _sharedPreferences;
+
+  RequestInterceptor(this._sharedPreferences);
+
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
+    String? token = _sharedPreferences.getString(Config.token);
+    debugPrint('TOKEN $token');
+    if (token != null) {
+      //handle token
+      options.headers = {'x-access-token': token};
+    }
     super.onRequest(options, handler);
   }
 }

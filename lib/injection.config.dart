@@ -10,20 +10,26 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:alice/alice.dart' as _i9;
-import 'package:dio/dio.dart' as _i10;
-import 'package:flutter/material.dart' as _i4;
+import 'package:dio/dio.dart' as _i13;
+import 'package:flutter/material.dart' as _i7;
 import 'package:get_it/get_it.dart' as _i1;
-import 'package:http/http.dart' as _i6;
+import 'package:http/http.dart' as _i4;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:logger/logger.dart' as _i7;
+import 'package:logger/logger.dart' as _i5;
 import 'package:shared_preferences/shared_preferences.dart' as _i8;
 
-import 'application/register/register_bloc.dart' as _i13;
-import 'domain/register/register_facade.dart' as _i11;
-import 'infrastructure/core/register_module.dart' as _i14;
-import 'infrastructure/register/register_repository.dart' as _i12;
-import 'presentation/core/app.dart' as _i3;
-import 'presentation/router/app_route.dart' as _i5;
+import 'application/authentication/authentication_bloc.dart' as _i12;
+import 'application/login/login_bloc.dart' as _i18;
+import 'application/register/register_bloc.dart' as _i19;
+import 'domain/auth/auth_facade.dart' as _i10;
+import 'domain/login/login_facade.dart' as _i14;
+import 'domain/register/register_facade.dart' as _i16;
+import 'infrastructure/auth/auth_repository.dart' as _i11;
+import 'infrastructure/core/register_module.dart' as _i20;
+import 'infrastructure/login/login_repository.dart' as _i15;
+import 'infrastructure/register/register_repository.dart' as _i17;
+import 'presentation/core/app.dart' as _i6;
+import 'presentation/router/app_route.dart' as _i3;
 
 extension GetItInjectableX on _i1.GetIt {
   // initializes the registration of main-scope dependencies inside of GetIt
@@ -37,11 +43,11 @@ extension GetItInjectableX on _i1.GetIt {
       environmentFilter,
     );
     final registerModules = _$RegisterModules();
-    gh.factory<_i3.App>(() => _i3.App(key: gh<_i4.Key>()));
-    gh.lazySingleton<_i5.AppRouter>(() => registerModules.appRouter);
-    gh.lazySingleton<_i6.Client>(() => registerModules.httpClient);
-    gh.lazySingleton<_i7.Logger>(() => registerModules.logger);
-    await gh.lazySingletonAsync<_i8.SharedPreferences>(
+    gh.lazySingleton<_i3.AppRouter>(() => registerModules.appRouter);
+    gh.lazySingleton<_i4.Client>(() => registerModules.httpClient);
+    gh.lazySingleton<_i5.Logger>(() => registerModules.logger);
+    gh.factory<_i6.MyApp>(() => _i6.MyApp(key: gh<_i7.Key>()));
+    await gh.factoryAsync<_i8.SharedPreferences>(
       () => registerModules.sharedPreferences,
       preResolve: true,
     );
@@ -50,8 +56,12 @@ extension GetItInjectableX on _i1.GetIt {
       instanceName: 'baseUrl',
     );
     gh.lazySingleton<_i9.Alice>(
-        () => registerModules.alice(gh<_i5.AppRouter>()));
-    await gh.lazySingletonAsync<_i10.Dio>(
+        () => registerModules.alice(gh<_i3.AppRouter>()));
+    gh.lazySingleton<_i10.AuthFacade>(
+        () => _i11.AuthRepository(gh<_i8.SharedPreferences>()));
+    gh.factory<_i12.AuthenticationBloc>(
+        () => _i12.AuthenticationBloc(gh<_i10.AuthFacade>()));
+    await gh.lazySingletonAsync<_i13.Dio>(
       () => registerModules.network(
         gh<String>(instanceName: 'baseUrl'),
         gh<_i8.SharedPreferences>(),
@@ -59,12 +69,15 @@ extension GetItInjectableX on _i1.GetIt {
       ),
       preResolve: true,
     );
-    gh.lazySingleton<_i11.RegisterFacade>(
-        () => _i12.RegisterRepository(gh<_i10.Dio>()));
-    gh.factory<_i13.RegisterBloc>(
-        () => _i13.RegisterBloc(gh<_i11.RegisterFacade>()));
+    gh.lazySingleton<_i14.LoginFacade>(
+        () => _i15.LoginRepository(gh<_i13.Dio>()));
+    gh.lazySingleton<_i16.RegisterFacade>(
+        () => _i17.RegisterRepository(gh<_i13.Dio>()));
+    gh.factory<_i18.LoginBloc>(() => _i18.LoginBloc(gh<_i14.LoginFacade>()));
+    gh.factory<_i19.RegisterBloc>(
+        () => _i19.RegisterBloc(gh<_i16.RegisterFacade>()));
     return this;
   }
 }
 
-class _$RegisterModules extends _i14.RegisterModules {}
+class _$RegisterModules extends _i20.RegisterModules {}

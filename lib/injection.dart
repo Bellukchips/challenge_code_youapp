@@ -9,4 +9,5 @@ GetIt getIt = GetIt.instance;
   preferRelativeImports: true, // default
   asExtension: true, // default
 )
-void configureDependencies() => getIt.init(environment: Environment.dev);
+Future<void> configureDependencies() =>
+    getIt.init(environment: Environment.dev);

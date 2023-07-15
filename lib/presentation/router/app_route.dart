@@ -1,4 +1,5 @@
 import 'package:youapp_test/presentation/pages/about/about_page.dart';
+import 'package:youapp_test/presentation/pages/about/interest/interest_page.dart';
 import 'package:youapp_test/presentation/pages/login/login_page.dart';
 import 'package:youapp_test/presentation/pages/splash/splash_page.dart';
 
@@ -16,6 +17,7 @@ class AppRouter extends _$AppRouter {
         AutoRoute(path: Routes.splash, page: SplashRoute.page, initial: true),
         AutoRoute(page: LoginRoute.page, path: Routes.login),
         AutoRoute(page: RegisterRoute.page, path: Routes.register),
-        AutoRoute(page: AboutRoute.page, path: Routes.about)
+        AutoRoute(page: AboutRoute.page, path: Routes.about),
+        AutoRoute(page: InterestRoute.page, path: Routes.interest)
       ];
 }

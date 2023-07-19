@@ -27,7 +27,7 @@ mixin _$ProfileDto {
   String? get horoscope => throw _privateConstructorUsedError;
   int? get height => throw _privateConstructorUsedError;
   int? get weight => throw _privateConstructorUsedError;
-  List<String>? get interest => throw _privateConstructorUsedError;
+  List<String>? get interests => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49,7 +49,7 @@ abstract class $ProfileDtoCopyWith<$Res> {
       String? horoscope,
       int? height,
       int? weight,
-      List<String>? interest});
+      List<String>? interests});
 }
 
 /// @nodoc
@@ -72,7 +72,7 @@ class _$ProfileDtoCopyWithImpl<$Res, $Val extends ProfileDto>
     Object? horoscope = freezed,
     Object? height = freezed,
     Object? weight = freezed,
-    Object? interest = freezed,
+    Object? interests = freezed,
   }) {
     return _then(_value.copyWith(
       email: freezed == email
@@ -103,9 +103,9 @@ class _$ProfileDtoCopyWithImpl<$Res, $Val extends ProfileDto>
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
               as int?,
-      interest: freezed == interest
-          ? _value.interest
-          : interest // ignore: cast_nullable_to_non_nullable
+      interests: freezed == interests
+          ? _value.interests
+          : interests // ignore: cast_nullable_to_non_nullable
               as List<String>?,
     ) as $Val);
   }
@@ -127,7 +127,7 @@ abstract class _$$_ProfileDtoCopyWith<$Res>
       String? horoscope,
       int? height,
       int? weight,
-      List<String>? interest});
+      List<String>? interests});
 }
 
 /// @nodoc
@@ -148,7 +148,7 @@ class __$$_ProfileDtoCopyWithImpl<$Res>
     Object? horoscope = freezed,
     Object? height = freezed,
     Object? weight = freezed,
-    Object? interest = freezed,
+    Object? interests = freezed,
   }) {
     return _then(_$_ProfileDto(
       email: freezed == email
@@ -179,9 +179,9 @@ class __$$_ProfileDtoCopyWithImpl<$Res>
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
               as int?,
-      interest: freezed == interest
-          ? _value._interest
-          : interest // ignore: cast_nullable_to_non_nullable
+      interests: freezed == interests
+          ? _value._interests
+          : interests // ignore: cast_nullable_to_non_nullable
               as List<String>?,
     ));
   }
@@ -198,8 +198,8 @@ class _$_ProfileDto extends _ProfileDto {
       this.horoscope,
       this.height,
       this.weight,
-      final List<String>? interest})
-      : _interest = interest,
+      final List<String>? interests})
+      : _interests = interests,
         super._();
 
   factory _$_ProfileDto.fromJson(Map<String, dynamic> json) =>
@@ -219,19 +219,19 @@ class _$_ProfileDto extends _ProfileDto {
   final int? height;
   @override
   final int? weight;
-  final List<String>? _interest;
+  final List<String>? _interests;
   @override
-  List<String>? get interest {
-    final value = _interest;
+  List<String>? get interests {
+    final value = _interests;
     if (value == null) return null;
-    if (_interest is EqualUnmodifiableListView) return _interest;
+    if (_interests is EqualUnmodifiableListView) return _interests;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
 
   @override
   String toString() {
-    return 'ProfileDto(email: $email, username: $username, name: $name, birthday: $birthday, horoscope: $horoscope, height: $height, weight: $weight, interest: $interest)';
+    return 'ProfileDto(email: $email, username: $username, name: $name, birthday: $birthday, horoscope: $horoscope, height: $height, weight: $weight, interests: $interests)';
   }
 
   @override
@@ -249,7 +249,8 @@ class _$_ProfileDto extends _ProfileDto {
                 other.horoscope == horoscope) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.weight, weight) || other.weight == weight) &&
-            const DeepCollectionEquality().equals(other._interest, _interest));
+            const DeepCollectionEquality()
+                .equals(other._interests, _interests));
   }
 
   @JsonKey(ignore: true)
@@ -263,7 +264,7 @@ class _$_ProfileDto extends _ProfileDto {
       horoscope,
       height,
       weight,
-      const DeepCollectionEquality().hash(_interest));
+      const DeepCollectionEquality().hash(_interests));
 
   @JsonKey(ignore: true)
   @override
@@ -288,7 +289,7 @@ abstract class _ProfileDto extends ProfileDto {
       final String? horoscope,
       final int? height,
       final int? weight,
-      final List<String>? interest}) = _$_ProfileDto;
+      final List<String>? interests}) = _$_ProfileDto;
   const _ProfileDto._() : super._();
 
   factory _ProfileDto.fromJson(Map<String, dynamic> json) =
@@ -309,7 +310,7 @@ abstract class _ProfileDto extends ProfileDto {
   @override
   int? get weight;
   @override
-  List<String>? get interest;
+  List<String>? get interests;
   @override
   @JsonKey(ignore: true)
   _$$_ProfileDtoCopyWith<_$_ProfileDto> get copyWith =>

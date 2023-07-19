@@ -23,6 +23,7 @@ mixin _$AuthFailure {
     required TResult Function() unauthenticated,
     required TResult Function() tokenNotProvided,
     required TResult Function() badRequest,
+    required TResult Function() invalidEmailAndPasswordCombination,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +33,7 @@ mixin _$AuthFailure {
     TResult? Function()? unauthenticated,
     TResult? Function()? tokenNotProvided,
     TResult? Function()? badRequest,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +43,7 @@ mixin _$AuthFailure {
     TResult Function()? unauthenticated,
     TResult Function()? tokenNotProvided,
     TResult Function()? badRequest,
+    TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -51,6 +54,8 @@ mixin _$AuthFailure {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_TokenNotProvided value) tokenNotProvided,
     required TResult Function(_BadRequest value) badRequest,
+    required TResult Function(_InvalidEmailAndPassword value)
+        invalidEmailAndPasswordCombination,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,6 +65,8 @@ mixin _$AuthFailure {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_TokenNotProvided value)? tokenNotProvided,
     TResult? Function(_BadRequest value)? badRequest,
+    TResult? Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +76,8 @@ mixin _$AuthFailure {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_TokenNotProvided value)? tokenNotProvided,
     TResult Function(_BadRequest value)? badRequest,
+    TResult Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -161,6 +170,7 @@ class _$_Unexpected implements _Unexpected {
     required TResult Function() unauthenticated,
     required TResult Function() tokenNotProvided,
     required TResult Function() badRequest,
+    required TResult Function() invalidEmailAndPasswordCombination,
   }) {
     return unexpected(error);
   }
@@ -173,6 +183,7 @@ class _$_Unexpected implements _Unexpected {
     TResult? Function()? unauthenticated,
     TResult? Function()? tokenNotProvided,
     TResult? Function()? badRequest,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return unexpected?.call(error);
   }
@@ -185,6 +196,7 @@ class _$_Unexpected implements _Unexpected {
     TResult Function()? unauthenticated,
     TResult Function()? tokenNotProvided,
     TResult Function()? badRequest,
+    TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
     if (unexpected != null) {
@@ -201,6 +213,8 @@ class _$_Unexpected implements _Unexpected {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_TokenNotProvided value) tokenNotProvided,
     required TResult Function(_BadRequest value) badRequest,
+    required TResult Function(_InvalidEmailAndPassword value)
+        invalidEmailAndPasswordCombination,
   }) {
     return unexpected(this);
   }
@@ -213,6 +227,8 @@ class _$_Unexpected implements _Unexpected {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_TokenNotProvided value)? tokenNotProvided,
     TResult? Function(_BadRequest value)? badRequest,
+    TResult? Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
   }) {
     return unexpected?.call(this);
   }
@@ -225,6 +241,8 @@ class _$_Unexpected implements _Unexpected {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_TokenNotProvided value)? tokenNotProvided,
     TResult Function(_BadRequest value)? badRequest,
+    TResult Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
     if (unexpected != null) {
@@ -286,6 +304,7 @@ class _$_ServerError implements _ServerError {
     required TResult Function() unauthenticated,
     required TResult Function() tokenNotProvided,
     required TResult Function() badRequest,
+    required TResult Function() invalidEmailAndPasswordCombination,
   }) {
     return serverError();
   }
@@ -298,6 +317,7 @@ class _$_ServerError implements _ServerError {
     TResult? Function()? unauthenticated,
     TResult? Function()? tokenNotProvided,
     TResult? Function()? badRequest,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return serverError?.call();
   }
@@ -310,6 +330,7 @@ class _$_ServerError implements _ServerError {
     TResult Function()? unauthenticated,
     TResult Function()? tokenNotProvided,
     TResult Function()? badRequest,
+    TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -326,6 +347,8 @@ class _$_ServerError implements _ServerError {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_TokenNotProvided value) tokenNotProvided,
     required TResult Function(_BadRequest value) badRequest,
+    required TResult Function(_InvalidEmailAndPassword value)
+        invalidEmailAndPasswordCombination,
   }) {
     return serverError(this);
   }
@@ -338,6 +361,8 @@ class _$_ServerError implements _ServerError {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_TokenNotProvided value)? tokenNotProvided,
     TResult? Function(_BadRequest value)? badRequest,
+    TResult? Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
   }) {
     return serverError?.call(this);
   }
@@ -350,6 +375,8 @@ class _$_ServerError implements _ServerError {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_TokenNotProvided value)? tokenNotProvided,
     TResult Function(_BadRequest value)? badRequest,
+    TResult Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
     if (serverError != null) {
@@ -406,6 +433,7 @@ class _$_Unauthenticated implements _Unauthenticated {
     required TResult Function() unauthenticated,
     required TResult Function() tokenNotProvided,
     required TResult Function() badRequest,
+    required TResult Function() invalidEmailAndPasswordCombination,
   }) {
     return unauthenticated();
   }
@@ -418,6 +446,7 @@ class _$_Unauthenticated implements _Unauthenticated {
     TResult? Function()? unauthenticated,
     TResult? Function()? tokenNotProvided,
     TResult? Function()? badRequest,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return unauthenticated?.call();
   }
@@ -430,6 +459,7 @@ class _$_Unauthenticated implements _Unauthenticated {
     TResult Function()? unauthenticated,
     TResult Function()? tokenNotProvided,
     TResult Function()? badRequest,
+    TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
     if (unauthenticated != null) {
@@ -446,6 +476,8 @@ class _$_Unauthenticated implements _Unauthenticated {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_TokenNotProvided value) tokenNotProvided,
     required TResult Function(_BadRequest value) badRequest,
+    required TResult Function(_InvalidEmailAndPassword value)
+        invalidEmailAndPasswordCombination,
   }) {
     return unauthenticated(this);
   }
@@ -458,6 +490,8 @@ class _$_Unauthenticated implements _Unauthenticated {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_TokenNotProvided value)? tokenNotProvided,
     TResult? Function(_BadRequest value)? badRequest,
+    TResult? Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
   }) {
     return unauthenticated?.call(this);
   }
@@ -470,6 +504,8 @@ class _$_Unauthenticated implements _Unauthenticated {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_TokenNotProvided value)? tokenNotProvided,
     TResult Function(_BadRequest value)? badRequest,
+    TResult Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
     if (unauthenticated != null) {
@@ -526,6 +562,7 @@ class _$_TokenNotProvided implements _TokenNotProvided {
     required TResult Function() unauthenticated,
     required TResult Function() tokenNotProvided,
     required TResult Function() badRequest,
+    required TResult Function() invalidEmailAndPasswordCombination,
   }) {
     return tokenNotProvided();
   }
@@ -538,6 +575,7 @@ class _$_TokenNotProvided implements _TokenNotProvided {
     TResult? Function()? unauthenticated,
     TResult? Function()? tokenNotProvided,
     TResult? Function()? badRequest,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return tokenNotProvided?.call();
   }
@@ -550,6 +588,7 @@ class _$_TokenNotProvided implements _TokenNotProvided {
     TResult Function()? unauthenticated,
     TResult Function()? tokenNotProvided,
     TResult Function()? badRequest,
+    TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
     if (tokenNotProvided != null) {
@@ -566,6 +605,8 @@ class _$_TokenNotProvided implements _TokenNotProvided {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_TokenNotProvided value) tokenNotProvided,
     required TResult Function(_BadRequest value) badRequest,
+    required TResult Function(_InvalidEmailAndPassword value)
+        invalidEmailAndPasswordCombination,
   }) {
     return tokenNotProvided(this);
   }
@@ -578,6 +619,8 @@ class _$_TokenNotProvided implements _TokenNotProvided {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_TokenNotProvided value)? tokenNotProvided,
     TResult? Function(_BadRequest value)? badRequest,
+    TResult? Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
   }) {
     return tokenNotProvided?.call(this);
   }
@@ -590,6 +633,8 @@ class _$_TokenNotProvided implements _TokenNotProvided {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_TokenNotProvided value)? tokenNotProvided,
     TResult Function(_BadRequest value)? badRequest,
+    TResult Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
     if (tokenNotProvided != null) {
@@ -646,6 +691,7 @@ class _$_BadRequest implements _BadRequest {
     required TResult Function() unauthenticated,
     required TResult Function() tokenNotProvided,
     required TResult Function() badRequest,
+    required TResult Function() invalidEmailAndPasswordCombination,
   }) {
     return badRequest();
   }
@@ -658,6 +704,7 @@ class _$_BadRequest implements _BadRequest {
     TResult? Function()? unauthenticated,
     TResult? Function()? tokenNotProvided,
     TResult? Function()? badRequest,
+    TResult? Function()? invalidEmailAndPasswordCombination,
   }) {
     return badRequest?.call();
   }
@@ -670,6 +717,7 @@ class _$_BadRequest implements _BadRequest {
     TResult Function()? unauthenticated,
     TResult Function()? tokenNotProvided,
     TResult Function()? badRequest,
+    TResult Function()? invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
     if (badRequest != null) {
@@ -686,6 +734,8 @@ class _$_BadRequest implements _BadRequest {
     required TResult Function(_Unauthenticated value) unauthenticated,
     required TResult Function(_TokenNotProvided value) tokenNotProvided,
     required TResult Function(_BadRequest value) badRequest,
+    required TResult Function(_InvalidEmailAndPassword value)
+        invalidEmailAndPasswordCombination,
   }) {
     return badRequest(this);
   }
@@ -698,6 +748,8 @@ class _$_BadRequest implements _BadRequest {
     TResult? Function(_Unauthenticated value)? unauthenticated,
     TResult? Function(_TokenNotProvided value)? tokenNotProvided,
     TResult? Function(_BadRequest value)? badRequest,
+    TResult? Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
   }) {
     return badRequest?.call(this);
   }
@@ -710,6 +762,8 @@ class _$_BadRequest implements _BadRequest {
     TResult Function(_Unauthenticated value)? unauthenticated,
     TResult Function(_TokenNotProvided value)? tokenNotProvided,
     TResult Function(_BadRequest value)? badRequest,
+    TResult Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
     required TResult orElse(),
   }) {
     if (badRequest != null) {
@@ -721,4 +775,134 @@ class _$_BadRequest implements _BadRequest {
 
 abstract class _BadRequest implements AuthFailure {
   const factory _BadRequest() = _$_BadRequest;
+}
+
+/// @nodoc
+abstract class _$$_InvalidEmailAndPasswordCopyWith<$Res> {
+  factory _$$_InvalidEmailAndPasswordCopyWith(_$_InvalidEmailAndPassword value,
+          $Res Function(_$_InvalidEmailAndPassword) then) =
+      __$$_InvalidEmailAndPasswordCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_InvalidEmailAndPasswordCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$_InvalidEmailAndPassword>
+    implements _$$_InvalidEmailAndPasswordCopyWith<$Res> {
+  __$$_InvalidEmailAndPasswordCopyWithImpl(_$_InvalidEmailAndPassword _value,
+      $Res Function(_$_InvalidEmailAndPassword) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_InvalidEmailAndPassword implements _InvalidEmailAndPassword {
+  const _$_InvalidEmailAndPassword();
+
+  @override
+  String toString() {
+    return 'AuthFailure.invalidEmailAndPasswordCombination()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InvalidEmailAndPassword);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? error) unexpected,
+    required TResult Function() serverError,
+    required TResult Function() unauthenticated,
+    required TResult Function() tokenNotProvided,
+    required TResult Function() badRequest,
+    required TResult Function() invalidEmailAndPasswordCombination,
+  }) {
+    return invalidEmailAndPasswordCombination();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? error)? unexpected,
+    TResult? Function()? serverError,
+    TResult? Function()? unauthenticated,
+    TResult? Function()? tokenNotProvided,
+    TResult? Function()? badRequest,
+    TResult? Function()? invalidEmailAndPasswordCombination,
+  }) {
+    return invalidEmailAndPasswordCombination?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? error)? unexpected,
+    TResult Function()? serverError,
+    TResult Function()? unauthenticated,
+    TResult Function()? tokenNotProvided,
+    TResult Function()? badRequest,
+    TResult Function()? invalidEmailAndPasswordCombination,
+    required TResult orElse(),
+  }) {
+    if (invalidEmailAndPasswordCombination != null) {
+      return invalidEmailAndPasswordCombination();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Unexpected value) unexpected,
+    required TResult Function(_ServerError value) serverError,
+    required TResult Function(_Unauthenticated value) unauthenticated,
+    required TResult Function(_TokenNotProvided value) tokenNotProvided,
+    required TResult Function(_BadRequest value) badRequest,
+    required TResult Function(_InvalidEmailAndPassword value)
+        invalidEmailAndPasswordCombination,
+  }) {
+    return invalidEmailAndPasswordCombination(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Unexpected value)? unexpected,
+    TResult? Function(_ServerError value)? serverError,
+    TResult? Function(_Unauthenticated value)? unauthenticated,
+    TResult? Function(_TokenNotProvided value)? tokenNotProvided,
+    TResult? Function(_BadRequest value)? badRequest,
+    TResult? Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
+  }) {
+    return invalidEmailAndPasswordCombination?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Unexpected value)? unexpected,
+    TResult Function(_ServerError value)? serverError,
+    TResult Function(_Unauthenticated value)? unauthenticated,
+    TResult Function(_TokenNotProvided value)? tokenNotProvided,
+    TResult Function(_BadRequest value)? badRequest,
+    TResult Function(_InvalidEmailAndPassword value)?
+        invalidEmailAndPasswordCombination,
+    required TResult orElse(),
+  }) {
+    if (invalidEmailAndPasswordCombination != null) {
+      return invalidEmailAndPasswordCombination(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _InvalidEmailAndPassword implements AuthFailure {
+  const factory _InvalidEmailAndPassword() = _$_InvalidEmailAndPassword;
 }

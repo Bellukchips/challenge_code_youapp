@@ -19,4 +19,5 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
       InvalidDate<T>;
   const factory ValueFailure.invalidNumber({required T failedValue}) =
       InvalidNumber<T>;
+  const factory ValueFailure.invalidBirthday({required T failledValue}) = InvalidBirthday<T>;
 }

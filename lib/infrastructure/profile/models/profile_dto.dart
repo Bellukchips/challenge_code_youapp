@@ -14,7 +14,7 @@ class ProfileDto with _$ProfileDto {
       String? horoscope,
       int? height,
       int? weight,
-      List<String>? interest}) = _ProfileDto;
+      List<String>? interests}) = _ProfileDto;
   Profile toDomain() {
     return Profile(
         email: email,
@@ -24,7 +24,7 @@ class ProfileDto with _$ProfileDto {
         horoscope: horoscope,
         height: height,
         weight: weight,
-        interest: interest);
+        interests: interests);
   }
 
   factory ProfileDto.fromJson(Map<String, dynamic> json) =>
@@ -35,7 +35,7 @@ class ProfileDto with _$ProfileDto {
         email: profile.email,
         height: profile.height,
         horoscope: profile.horoscope,
-        interest: profile.interest,
+        interests: profile.interests,
         name: profile.name,
         username: profile.username,
         weight: profile.weight);

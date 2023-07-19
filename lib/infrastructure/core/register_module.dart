@@ -84,7 +84,9 @@ class RequestInterceptor extends Interceptor {
     debugPrint('TOKEN $token');
     if (token != null) {
       //handle token
-      options.headers = {'x-access-token': token};
+      options.headers = {
+        'x-access-token': token,
+      };
     }
     super.onRequest(options, handler);
   }

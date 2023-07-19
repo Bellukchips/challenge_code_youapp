@@ -28,6 +28,10 @@ class LoginRepository implements LoginFacade {
           },
           options: Options(contentType: Headers.formUrlEncodedContentType));
       var result = response.data;
+      if (result['message'] == 'User not found' ||
+          result['message'] == 'Incorrect password') {
+        return left(const AuthFailure.invalidEmailAndPasswordCombination());
+      }
       return right(LoginDto.fromJson(result).toDomain());
     } on DioException catch (e) {
       if (e.response != null) {

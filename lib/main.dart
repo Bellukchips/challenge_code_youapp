@@ -4,6 +4,7 @@ import 'package:youapp_test/application/authentication/authentication_bloc.dart'
 import 'package:youapp_test/application/login/login_bloc.dart';
 import 'package:youapp_test/application/observer/bloc_observer.dart';
 import 'package:youapp_test/application/profile/profile_bloc.dart';
+import 'package:youapp_test/application/profileForm/profile_form_bloc.dart';
 import 'package:youapp_test/application/register/register_bloc.dart';
 import 'package:youapp_test/injection.dart';
 
@@ -28,6 +29,9 @@ Future<void> main() async {
         ),
         BlocProvider(
           create: (context) => getIt<ProfileBloc>(),
+        ),
+        BlocProvider(
+          create: (context) => getIt<ProfileFormBloc>(),
         )
       ],
       child: MyApp(),

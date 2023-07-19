@@ -19,18 +19,19 @@ import 'package:logger/logger.dart' as _i5;
 import 'package:shared_preferences/shared_preferences.dart' as _i8;
 
 import 'application/authentication/authentication_bloc.dart' as _i12;
-import 'application/login/login_bloc.dart' as _i20;
-import 'application/profile/profile_bloc.dart' as _i21;
-import 'application/register/register_bloc.dart' as _i22;
+import 'application/login/login_bloc.dart' as _i21;
+import 'application/profile/profile_bloc.dart' as _i22;
+import 'application/profileForm/profile_form_bloc.dart' as _i18;
+import 'application/register/register_bloc.dart' as _i23;
 import 'domain/auth/auth_facade.dart' as _i10;
 import 'domain/login/login_facade.dart' as _i14;
 import 'domain/profile/profile_facade.dart' as _i16;
-import 'domain/register/register_facade.dart' as _i18;
+import 'domain/register/register_facade.dart' as _i19;
 import 'infrastructure/auth/auth_repository.dart' as _i11;
-import 'infrastructure/core/register_module.dart' as _i23;
+import 'infrastructure/core/register_module.dart' as _i24;
 import 'infrastructure/login/login_repository.dart' as _i15;
 import 'infrastructure/profile/profile_repository.dart' as _i17;
-import 'infrastructure/register/register_repository.dart' as _i19;
+import 'infrastructure/register/register_repository.dart' as _i20;
 import 'presentation/core/app.dart' as _i6;
 import 'presentation/router/app_route.dart' as _i3;
 
@@ -76,15 +77,17 @@ extension GetItInjectableX on _i1.GetIt {
         () => _i15.LoginRepository(gh<_i13.Dio>()));
     gh.lazySingleton<_i16.ProfileFacade>(
         () => _i17.ProfileRepository(gh<_i13.Dio>()));
-    gh.lazySingleton<_i18.RegisterFacade>(
-        () => _i19.RegisterRepository(gh<_i13.Dio>()));
-    gh.factory<_i20.LoginBloc>(() => _i20.LoginBloc(gh<_i14.LoginFacade>()));
-    gh.factory<_i21.ProfileBloc>(
-        () => _i21.ProfileBloc(gh<_i16.ProfileFacade>()));
-    gh.factory<_i22.RegisterBloc>(
-        () => _i22.RegisterBloc(gh<_i18.RegisterFacade>()));
+    gh.factory<_i18.ProfileFormBloc>(
+        () => _i18.ProfileFormBloc(gh<_i16.ProfileFacade>()));
+    gh.lazySingleton<_i19.RegisterFacade>(
+        () => _i20.RegisterRepository(gh<_i13.Dio>()));
+    gh.factory<_i21.LoginBloc>(() => _i21.LoginBloc(gh<_i14.LoginFacade>()));
+    gh.factory<_i22.ProfileBloc>(
+        () => _i22.ProfileBloc(gh<_i16.ProfileFacade>()));
+    gh.factory<_i23.RegisterBloc>(
+        () => _i23.RegisterBloc(gh<_i19.RegisterFacade>()));
     return this;
   }
 }
 
-class _$RegisterModules extends _i23.RegisterModules {}
+class _$RegisterModules extends _i24.RegisterModules {}

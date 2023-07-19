@@ -16,7 +16,6 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$ValueFailure<T> {
-  T get failedValue => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(T failedValue) invalidEmail,
@@ -27,6 +26,7 @@ mixin _$ValueFailure<T> {
     required TResult Function(T failedValue, int max) exceedingLength,
     required TResult Function(T failedValue) invalidDate,
     required TResult Function(T failedValue) invalidNumber,
+    required TResult Function(T failledValue) invalidBirthday,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,6 +39,7 @@ mixin _$ValueFailure<T> {
     TResult? Function(T failedValue, int max)? exceedingLength,
     TResult? Function(T failedValue)? invalidDate,
     TResult? Function(T failedValue)? invalidNumber,
+    TResult? Function(T failledValue)? invalidBirthday,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,6 +52,7 @@ mixin _$ValueFailure<T> {
     TResult Function(T failedValue, int max)? exceedingLength,
     TResult Function(T failedValue)? invalidDate,
     TResult Function(T failedValue)? invalidNumber,
+    TResult Function(T failledValue)? invalidBirthday,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -64,6 +66,7 @@ mixin _$ValueFailure<T> {
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidNumber<T> value) invalidNumber,
+    required TResult Function(InvalidBirthday<T> value) invalidBirthday,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,6 +79,7 @@ mixin _$ValueFailure<T> {
     TResult? Function(ExceedingLength<T> value)? exceedingLength,
     TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidNumber<T> value)? invalidNumber,
+    TResult? Function(InvalidBirthday<T> value)? invalidBirthday,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -88,12 +92,9 @@ mixin _$ValueFailure<T> {
     TResult Function(ExceedingLength<T> value)? exceedingLength,
     TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidNumber<T> value)? invalidNumber,
+    TResult Function(InvalidBirthday<T> value)? invalidBirthday,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -102,8 +103,6 @@ abstract class $ValueFailureCopyWith<T, $Res> {
   factory $ValueFailureCopyWith(
           ValueFailure<T> value, $Res Function(ValueFailure<T>) then) =
       _$ValueFailureCopyWithImpl<T, $Res, ValueFailure<T>>;
-  @useResult
-  $Res call({T failedValue});
 }
 
 /// @nodoc
@@ -115,28 +114,13 @@ class _$ValueFailureCopyWithImpl<T, $Res, $Val extends ValueFailure<T>>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? failedValue = freezed,
-  }) {
-    return _then(_value.copyWith(
-      failedValue: freezed == failedValue
-          ? _value.failedValue
-          : failedValue // ignore: cast_nullable_to_non_nullable
-              as T,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$InvalidEmailCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$InvalidEmailCopyWith<T, $Res> {
   factory _$$InvalidEmailCopyWith(
           _$InvalidEmail<T> value, $Res Function(_$InvalidEmail<T>) then) =
       __$$InvalidEmailCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -206,6 +190,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     required TResult Function(T failedValue, int max) exceedingLength,
     required TResult Function(T failedValue) invalidDate,
     required TResult Function(T failedValue) invalidNumber,
+    required TResult Function(T failledValue) invalidBirthday,
   }) {
     return invalidEmail(failedValue);
   }
@@ -221,6 +206,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     TResult? Function(T failedValue, int max)? exceedingLength,
     TResult? Function(T failedValue)? invalidDate,
     TResult? Function(T failedValue)? invalidNumber,
+    TResult? Function(T failledValue)? invalidBirthday,
   }) {
     return invalidEmail?.call(failedValue);
   }
@@ -236,6 +222,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     TResult Function(T failedValue, int max)? exceedingLength,
     TResult Function(T failedValue)? invalidDate,
     TResult Function(T failedValue)? invalidNumber,
+    TResult Function(T failledValue)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -255,6 +242,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidNumber<T> value) invalidNumber,
+    required TResult Function(InvalidBirthday<T> value) invalidBirthday,
   }) {
     return invalidEmail(this);
   }
@@ -270,6 +258,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     TResult? Function(ExceedingLength<T> value)? exceedingLength,
     TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidNumber<T> value)? invalidNumber,
+    TResult? Function(InvalidBirthday<T> value)? invalidBirthday,
   }) {
     return invalidEmail?.call(this);
   }
@@ -285,6 +274,7 @@ class _$InvalidEmail<T> implements InvalidEmail<T> {
     TResult Function(ExceedingLength<T> value)? exceedingLength,
     TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidNumber<T> value)? invalidNumber,
+    TResult Function(InvalidBirthday<T> value)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (invalidEmail != null) {
@@ -298,21 +288,17 @@ abstract class InvalidEmail<T> implements ValueFailure<T> {
   const factory InvalidEmail({required final T failedValue}) =
       _$InvalidEmail<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$InvalidEmailCopyWith<T, _$InvalidEmail<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ShortPasswordCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$ShortPasswordCopyWith<T, $Res> {
   factory _$$ShortPasswordCopyWith(
           _$ShortPassword<T> value, $Res Function(_$ShortPassword<T>) then) =
       __$$ShortPasswordCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -382,6 +368,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     required TResult Function(T failedValue, int max) exceedingLength,
     required TResult Function(T failedValue) invalidDate,
     required TResult Function(T failedValue) invalidNumber,
+    required TResult Function(T failledValue) invalidBirthday,
   }) {
     return invalidPassword(failedValue);
   }
@@ -397,6 +384,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     TResult? Function(T failedValue, int max)? exceedingLength,
     TResult? Function(T failedValue)? invalidDate,
     TResult? Function(T failedValue)? invalidNumber,
+    TResult? Function(T failledValue)? invalidBirthday,
   }) {
     return invalidPassword?.call(failedValue);
   }
@@ -412,6 +400,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     TResult Function(T failedValue, int max)? exceedingLength,
     TResult Function(T failedValue)? invalidDate,
     TResult Function(T failedValue)? invalidNumber,
+    TResult Function(T failledValue)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (invalidPassword != null) {
@@ -431,6 +420,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidNumber<T> value) invalidNumber,
+    required TResult Function(InvalidBirthday<T> value) invalidBirthday,
   }) {
     return invalidPassword(this);
   }
@@ -446,6 +436,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     TResult? Function(ExceedingLength<T> value)? exceedingLength,
     TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidNumber<T> value)? invalidNumber,
+    TResult? Function(InvalidBirthday<T> value)? invalidBirthday,
   }) {
     return invalidPassword?.call(this);
   }
@@ -461,6 +452,7 @@ class _$ShortPassword<T> implements ShortPassword<T> {
     TResult Function(ExceedingLength<T> value)? exceedingLength,
     TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidNumber<T> value)? invalidNumber,
+    TResult Function(InvalidBirthday<T> value)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (invalidPassword != null) {
@@ -474,20 +466,16 @@ abstract class ShortPassword<T> implements ValueFailure<T> {
   const factory ShortPassword({required final T failedValue}) =
       _$ShortPassword<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$ShortPasswordCopyWith<T, _$ShortPassword<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$EmptyCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$EmptyCopyWith<T, $Res> {
   factory _$$EmptyCopyWith(_$Empty<T> value, $Res Function(_$Empty<T>) then) =
       __$$EmptyCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -556,6 +544,7 @@ class _$Empty<T> implements Empty<T> {
     required TResult Function(T failedValue, int max) exceedingLength,
     required TResult Function(T failedValue) invalidDate,
     required TResult Function(T failedValue) invalidNumber,
+    required TResult Function(T failledValue) invalidBirthday,
   }) {
     return empty(failedValue);
   }
@@ -571,6 +560,7 @@ class _$Empty<T> implements Empty<T> {
     TResult? Function(T failedValue, int max)? exceedingLength,
     TResult? Function(T failedValue)? invalidDate,
     TResult? Function(T failedValue)? invalidNumber,
+    TResult? Function(T failledValue)? invalidBirthday,
   }) {
     return empty?.call(failedValue);
   }
@@ -586,6 +576,7 @@ class _$Empty<T> implements Empty<T> {
     TResult Function(T failedValue, int max)? exceedingLength,
     TResult Function(T failedValue)? invalidDate,
     TResult Function(T failedValue)? invalidNumber,
+    TResult Function(T failledValue)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -605,6 +596,7 @@ class _$Empty<T> implements Empty<T> {
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidNumber<T> value) invalidNumber,
+    required TResult Function(InvalidBirthday<T> value) invalidBirthday,
   }) {
     return empty(this);
   }
@@ -620,6 +612,7 @@ class _$Empty<T> implements Empty<T> {
     TResult? Function(ExceedingLength<T> value)? exceedingLength,
     TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidNumber<T> value)? invalidNumber,
+    TResult? Function(InvalidBirthday<T> value)? invalidBirthday,
   }) {
     return empty?.call(this);
   }
@@ -635,6 +628,7 @@ class _$Empty<T> implements Empty<T> {
     TResult Function(ExceedingLength<T> value)? exceedingLength,
     TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidNumber<T> value)? invalidNumber,
+    TResult Function(InvalidBirthday<T> value)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (empty != null) {
@@ -647,21 +641,17 @@ class _$Empty<T> implements Empty<T> {
 abstract class Empty<T> implements ValueFailure<T> {
   const factory Empty({required final T failedValue}) = _$Empty<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$EmptyCopyWith<T, _$Empty<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$MultilineCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$MultilineCopyWith<T, $Res> {
   factory _$$MultilineCopyWith(
           _$Multiline<T> value, $Res Function(_$Multiline<T>) then) =
       __$$MultilineCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -731,6 +721,7 @@ class _$Multiline<T> implements Multiline<T> {
     required TResult Function(T failedValue, int max) exceedingLength,
     required TResult Function(T failedValue) invalidDate,
     required TResult Function(T failedValue) invalidNumber,
+    required TResult Function(T failledValue) invalidBirthday,
   }) {
     return multiline(failedValue);
   }
@@ -746,6 +737,7 @@ class _$Multiline<T> implements Multiline<T> {
     TResult? Function(T failedValue, int max)? exceedingLength,
     TResult? Function(T failedValue)? invalidDate,
     TResult? Function(T failedValue)? invalidNumber,
+    TResult? Function(T failledValue)? invalidBirthday,
   }) {
     return multiline?.call(failedValue);
   }
@@ -761,6 +753,7 @@ class _$Multiline<T> implements Multiline<T> {
     TResult Function(T failedValue, int max)? exceedingLength,
     TResult Function(T failedValue)? invalidDate,
     TResult Function(T failedValue)? invalidNumber,
+    TResult Function(T failledValue)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (multiline != null) {
@@ -780,6 +773,7 @@ class _$Multiline<T> implements Multiline<T> {
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidNumber<T> value) invalidNumber,
+    required TResult Function(InvalidBirthday<T> value) invalidBirthday,
   }) {
     return multiline(this);
   }
@@ -795,6 +789,7 @@ class _$Multiline<T> implements Multiline<T> {
     TResult? Function(ExceedingLength<T> value)? exceedingLength,
     TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidNumber<T> value)? invalidNumber,
+    TResult? Function(InvalidBirthday<T> value)? invalidBirthday,
   }) {
     return multiline?.call(this);
   }
@@ -810,6 +805,7 @@ class _$Multiline<T> implements Multiline<T> {
     TResult Function(ExceedingLength<T> value)? exceedingLength,
     TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidNumber<T> value)? invalidNumber,
+    TResult Function(InvalidBirthday<T> value)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (multiline != null) {
@@ -822,21 +818,17 @@ class _$Multiline<T> implements Multiline<T> {
 abstract class Multiline<T> implements ValueFailure<T> {
   const factory Multiline({required final T failedValue}) = _$Multiline<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$MultilineCopyWith<T, _$Multiline<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SingleLineCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$SingleLineCopyWith<T, $Res> {
   factory _$$SingleLineCopyWith(
           _$SingleLine<T> value, $Res Function(_$SingleLine<T>) then) =
       __$$SingleLineCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -906,6 +898,7 @@ class _$SingleLine<T> implements SingleLine<T> {
     required TResult Function(T failedValue, int max) exceedingLength,
     required TResult Function(T failedValue) invalidDate,
     required TResult Function(T failedValue) invalidNumber,
+    required TResult Function(T failledValue) invalidBirthday,
   }) {
     return singleLine(failedValue);
   }
@@ -921,6 +914,7 @@ class _$SingleLine<T> implements SingleLine<T> {
     TResult? Function(T failedValue, int max)? exceedingLength,
     TResult? Function(T failedValue)? invalidDate,
     TResult? Function(T failedValue)? invalidNumber,
+    TResult? Function(T failledValue)? invalidBirthday,
   }) {
     return singleLine?.call(failedValue);
   }
@@ -936,6 +930,7 @@ class _$SingleLine<T> implements SingleLine<T> {
     TResult Function(T failedValue, int max)? exceedingLength,
     TResult Function(T failedValue)? invalidDate,
     TResult Function(T failedValue)? invalidNumber,
+    TResult Function(T failledValue)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (singleLine != null) {
@@ -955,6 +950,7 @@ class _$SingleLine<T> implements SingleLine<T> {
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidNumber<T> value) invalidNumber,
+    required TResult Function(InvalidBirthday<T> value) invalidBirthday,
   }) {
     return singleLine(this);
   }
@@ -970,6 +966,7 @@ class _$SingleLine<T> implements SingleLine<T> {
     TResult? Function(ExceedingLength<T> value)? exceedingLength,
     TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidNumber<T> value)? invalidNumber,
+    TResult? Function(InvalidBirthday<T> value)? invalidBirthday,
   }) {
     return singleLine?.call(this);
   }
@@ -985,6 +982,7 @@ class _$SingleLine<T> implements SingleLine<T> {
     TResult Function(ExceedingLength<T> value)? exceedingLength,
     TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidNumber<T> value)? invalidNumber,
+    TResult Function(InvalidBirthday<T> value)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (singleLine != null) {
@@ -997,21 +995,17 @@ class _$SingleLine<T> implements SingleLine<T> {
 abstract class SingleLine<T> implements ValueFailure<T> {
   const factory SingleLine({required final T failedValue}) = _$SingleLine<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$SingleLineCopyWith<T, _$SingleLine<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ExceedingLengthCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$ExceedingLengthCopyWith<T, $Res> {
   factory _$$ExceedingLengthCopyWith(_$ExceedingLength<T> value,
           $Res Function(_$ExceedingLength<T>) then) =
       __$$ExceedingLengthCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue, int max});
 }
@@ -1090,6 +1084,7 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
     required TResult Function(T failedValue, int max) exceedingLength,
     required TResult Function(T failedValue) invalidDate,
     required TResult Function(T failedValue) invalidNumber,
+    required TResult Function(T failledValue) invalidBirthday,
   }) {
     return exceedingLength(failedValue, max);
   }
@@ -1105,6 +1100,7 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
     TResult? Function(T failedValue, int max)? exceedingLength,
     TResult? Function(T failedValue)? invalidDate,
     TResult? Function(T failedValue)? invalidNumber,
+    TResult? Function(T failledValue)? invalidBirthday,
   }) {
     return exceedingLength?.call(failedValue, max);
   }
@@ -1120,6 +1116,7 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
     TResult Function(T failedValue, int max)? exceedingLength,
     TResult Function(T failedValue)? invalidDate,
     TResult Function(T failedValue)? invalidNumber,
+    TResult Function(T failledValue)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (exceedingLength != null) {
@@ -1139,6 +1136,7 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidNumber<T> value) invalidNumber,
+    required TResult Function(InvalidBirthday<T> value) invalidBirthday,
   }) {
     return exceedingLength(this);
   }
@@ -1154,6 +1152,7 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
     TResult? Function(ExceedingLength<T> value)? exceedingLength,
     TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidNumber<T> value)? invalidNumber,
+    TResult? Function(InvalidBirthday<T> value)? invalidBirthday,
   }) {
     return exceedingLength?.call(this);
   }
@@ -1169,6 +1168,7 @@ class _$ExceedingLength<T> implements ExceedingLength<T> {
     TResult Function(ExceedingLength<T> value)? exceedingLength,
     TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidNumber<T> value)? invalidNumber,
+    TResult Function(InvalidBirthday<T> value)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (exceedingLength != null) {
@@ -1183,22 +1183,18 @@ abstract class ExceedingLength<T> implements ValueFailure<T> {
       {required final T failedValue,
       required final int max}) = _$ExceedingLength<T>;
 
-  @override
   T get failedValue;
   int get max;
-  @override
   @JsonKey(ignore: true)
   _$$ExceedingLengthCopyWith<T, _$ExceedingLength<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$InvalidDateCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$InvalidDateCopyWith<T, $Res> {
   factory _$$InvalidDateCopyWith(
           _$InvalidDate<T> value, $Res Function(_$InvalidDate<T>) then) =
       __$$InvalidDateCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -1268,6 +1264,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     required TResult Function(T failedValue, int max) exceedingLength,
     required TResult Function(T failedValue) invalidDate,
     required TResult Function(T failedValue) invalidNumber,
+    required TResult Function(T failledValue) invalidBirthday,
   }) {
     return invalidDate(failedValue);
   }
@@ -1283,6 +1280,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     TResult? Function(T failedValue, int max)? exceedingLength,
     TResult? Function(T failedValue)? invalidDate,
     TResult? Function(T failedValue)? invalidNumber,
+    TResult? Function(T failledValue)? invalidBirthday,
   }) {
     return invalidDate?.call(failedValue);
   }
@@ -1298,6 +1296,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     TResult Function(T failedValue, int max)? exceedingLength,
     TResult Function(T failedValue)? invalidDate,
     TResult Function(T failedValue)? invalidNumber,
+    TResult Function(T failledValue)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (invalidDate != null) {
@@ -1317,6 +1316,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidNumber<T> value) invalidNumber,
+    required TResult Function(InvalidBirthday<T> value) invalidBirthday,
   }) {
     return invalidDate(this);
   }
@@ -1332,6 +1332,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     TResult? Function(ExceedingLength<T> value)? exceedingLength,
     TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidNumber<T> value)? invalidNumber,
+    TResult? Function(InvalidBirthday<T> value)? invalidBirthday,
   }) {
     return invalidDate?.call(this);
   }
@@ -1347,6 +1348,7 @@ class _$InvalidDate<T> implements InvalidDate<T> {
     TResult Function(ExceedingLength<T> value)? exceedingLength,
     TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidNumber<T> value)? invalidNumber,
+    TResult Function(InvalidBirthday<T> value)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (invalidDate != null) {
@@ -1359,21 +1361,17 @@ class _$InvalidDate<T> implements InvalidDate<T> {
 abstract class InvalidDate<T> implements ValueFailure<T> {
   const factory InvalidDate({required final T failedValue}) = _$InvalidDate<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$InvalidDateCopyWith<T, _$InvalidDate<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$InvalidNumberCopyWith<T, $Res>
-    implements $ValueFailureCopyWith<T, $Res> {
+abstract class _$$InvalidNumberCopyWith<T, $Res> {
   factory _$$InvalidNumberCopyWith(
           _$InvalidNumber<T> value, $Res Function(_$InvalidNumber<T>) then) =
       __$$InvalidNumberCopyWithImpl<T, $Res>;
-  @override
   @useResult
   $Res call({T failedValue});
 }
@@ -1443,6 +1441,7 @@ class _$InvalidNumber<T> implements InvalidNumber<T> {
     required TResult Function(T failedValue, int max) exceedingLength,
     required TResult Function(T failedValue) invalidDate,
     required TResult Function(T failedValue) invalidNumber,
+    required TResult Function(T failledValue) invalidBirthday,
   }) {
     return invalidNumber(failedValue);
   }
@@ -1458,6 +1457,7 @@ class _$InvalidNumber<T> implements InvalidNumber<T> {
     TResult? Function(T failedValue, int max)? exceedingLength,
     TResult? Function(T failedValue)? invalidDate,
     TResult? Function(T failedValue)? invalidNumber,
+    TResult? Function(T failledValue)? invalidBirthday,
   }) {
     return invalidNumber?.call(failedValue);
   }
@@ -1473,6 +1473,7 @@ class _$InvalidNumber<T> implements InvalidNumber<T> {
     TResult Function(T failedValue, int max)? exceedingLength,
     TResult Function(T failedValue)? invalidDate,
     TResult Function(T failedValue)? invalidNumber,
+    TResult Function(T failledValue)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (invalidNumber != null) {
@@ -1492,6 +1493,7 @@ class _$InvalidNumber<T> implements InvalidNumber<T> {
     required TResult Function(ExceedingLength<T> value) exceedingLength,
     required TResult Function(InvalidDate<T> value) invalidDate,
     required TResult Function(InvalidNumber<T> value) invalidNumber,
+    required TResult Function(InvalidBirthday<T> value) invalidBirthday,
   }) {
     return invalidNumber(this);
   }
@@ -1507,6 +1509,7 @@ class _$InvalidNumber<T> implements InvalidNumber<T> {
     TResult? Function(ExceedingLength<T> value)? exceedingLength,
     TResult? Function(InvalidDate<T> value)? invalidDate,
     TResult? Function(InvalidNumber<T> value)? invalidNumber,
+    TResult? Function(InvalidBirthday<T> value)? invalidBirthday,
   }) {
     return invalidNumber?.call(this);
   }
@@ -1522,6 +1525,7 @@ class _$InvalidNumber<T> implements InvalidNumber<T> {
     TResult Function(ExceedingLength<T> value)? exceedingLength,
     TResult Function(InvalidDate<T> value)? invalidDate,
     TResult Function(InvalidNumber<T> value)? invalidNumber,
+    TResult Function(InvalidBirthday<T> value)? invalidBirthday,
     required TResult orElse(),
   }) {
     if (invalidNumber != null) {
@@ -1535,10 +1539,187 @@ abstract class InvalidNumber<T> implements ValueFailure<T> {
   const factory InvalidNumber({required final T failedValue}) =
       _$InvalidNumber<T>;
 
-  @override
   T get failedValue;
-  @override
   @JsonKey(ignore: true)
   _$$InvalidNumberCopyWith<T, _$InvalidNumber<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$InvalidBirthdayCopyWith<T, $Res> {
+  factory _$$InvalidBirthdayCopyWith(_$InvalidBirthday<T> value,
+          $Res Function(_$InvalidBirthday<T>) then) =
+      __$$InvalidBirthdayCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({T failledValue});
+}
+
+/// @nodoc
+class __$$InvalidBirthdayCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res, _$InvalidBirthday<T>>
+    implements _$$InvalidBirthdayCopyWith<T, $Res> {
+  __$$InvalidBirthdayCopyWithImpl(
+      _$InvalidBirthday<T> _value, $Res Function(_$InvalidBirthday<T>) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? failledValue = freezed,
+  }) {
+    return _then(_$InvalidBirthday<T>(
+      failledValue: freezed == failledValue
+          ? _value.failledValue
+          : failledValue // ignore: cast_nullable_to_non_nullable
+              as T,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$InvalidBirthday<T> implements InvalidBirthday<T> {
+  const _$InvalidBirthday({required this.failledValue});
+
+  @override
+  final T failledValue;
+
+  @override
+  String toString() {
+    return 'ValueFailure<$T>.invalidBirthday(failledValue: $failledValue)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$InvalidBirthday<T> &&
+            const DeepCollectionEquality()
+                .equals(other.failledValue, failledValue));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(failledValue));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$InvalidBirthdayCopyWith<T, _$InvalidBirthday<T>> get copyWith =>
+      __$$InvalidBirthdayCopyWithImpl<T, _$InvalidBirthday<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(T failedValue) invalidEmail,
+    required TResult Function(T failedValue) invalidPassword,
+    required TResult Function(T failedValue) empty,
+    required TResult Function(T failedValue) multiline,
+    required TResult Function(T failedValue) singleLine,
+    required TResult Function(T failedValue, int max) exceedingLength,
+    required TResult Function(T failedValue) invalidDate,
+    required TResult Function(T failedValue) invalidNumber,
+    required TResult Function(T failledValue) invalidBirthday,
+  }) {
+    return invalidBirthday(failledValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(T failedValue)? invalidEmail,
+    TResult? Function(T failedValue)? invalidPassword,
+    TResult? Function(T failedValue)? empty,
+    TResult? Function(T failedValue)? multiline,
+    TResult? Function(T failedValue)? singleLine,
+    TResult? Function(T failedValue, int max)? exceedingLength,
+    TResult? Function(T failedValue)? invalidDate,
+    TResult? Function(T failedValue)? invalidNumber,
+    TResult? Function(T failledValue)? invalidBirthday,
+  }) {
+    return invalidBirthday?.call(failledValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(T failedValue)? invalidEmail,
+    TResult Function(T failedValue)? invalidPassword,
+    TResult Function(T failedValue)? empty,
+    TResult Function(T failedValue)? multiline,
+    TResult Function(T failedValue)? singleLine,
+    TResult Function(T failedValue, int max)? exceedingLength,
+    TResult Function(T failedValue)? invalidDate,
+    TResult Function(T failedValue)? invalidNumber,
+    TResult Function(T failledValue)? invalidBirthday,
+    required TResult orElse(),
+  }) {
+    if (invalidBirthday != null) {
+      return invalidBirthday(failledValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(InvalidEmail<T> value) invalidEmail,
+    required TResult Function(ShortPassword<T> value) invalidPassword,
+    required TResult Function(Empty<T> value) empty,
+    required TResult Function(Multiline<T> value) multiline,
+    required TResult Function(SingleLine<T> value) singleLine,
+    required TResult Function(ExceedingLength<T> value) exceedingLength,
+    required TResult Function(InvalidDate<T> value) invalidDate,
+    required TResult Function(InvalidNumber<T> value) invalidNumber,
+    required TResult Function(InvalidBirthday<T> value) invalidBirthday,
+  }) {
+    return invalidBirthday(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(InvalidEmail<T> value)? invalidEmail,
+    TResult? Function(ShortPassword<T> value)? invalidPassword,
+    TResult? Function(Empty<T> value)? empty,
+    TResult? Function(Multiline<T> value)? multiline,
+    TResult? Function(SingleLine<T> value)? singleLine,
+    TResult? Function(ExceedingLength<T> value)? exceedingLength,
+    TResult? Function(InvalidDate<T> value)? invalidDate,
+    TResult? Function(InvalidNumber<T> value)? invalidNumber,
+    TResult? Function(InvalidBirthday<T> value)? invalidBirthday,
+  }) {
+    return invalidBirthday?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(InvalidEmail<T> value)? invalidEmail,
+    TResult Function(ShortPassword<T> value)? invalidPassword,
+    TResult Function(Empty<T> value)? empty,
+    TResult Function(Multiline<T> value)? multiline,
+    TResult Function(SingleLine<T> value)? singleLine,
+    TResult Function(ExceedingLength<T> value)? exceedingLength,
+    TResult Function(InvalidDate<T> value)? invalidDate,
+    TResult Function(InvalidNumber<T> value)? invalidNumber,
+    TResult Function(InvalidBirthday<T> value)? invalidBirthday,
+    required TResult orElse(),
+  }) {
+    if (invalidBirthday != null) {
+      return invalidBirthday(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class InvalidBirthday<T> implements ValueFailure<T> {
+  const factory InvalidBirthday({required final T failledValue}) =
+      _$InvalidBirthday<T>;
+
+  T get failledValue;
+  @JsonKey(ignore: true)
+  _$$InvalidBirthdayCopyWith<T, _$InvalidBirthday<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }

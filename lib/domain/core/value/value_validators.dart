@@ -1,6 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:youapp_test/domain/core/failure/failure.dart';
 
+import '../../../presentation/pages/about/helper/datetime_formatter.dart';
+
 Either<ValueFailure<String>, String> validateEmailAddress(String input) {
   const emailRegex =
       r"""^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$""";
@@ -63,5 +65,14 @@ Either<ValueFailure<String>, String> validateDate(String input) {
     return right(input);
   } else {
     return left(ValueFailure.invalidDate(failedValue: input));
+  }
+}
+
+Either<ValueFailure<String>, String> validateBirthday(String input) {
+
+  if (input.isNotEmpty) {
+    return right(input);
+  } else {
+    return left(ValueFailure.invalidBirthday(failledValue: input));
   }
 }

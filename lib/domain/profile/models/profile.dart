@@ -12,7 +12,7 @@ abstract class Profile with _$Profile {
       required String? horoscope,
       required int? height,
       required int? weight,
-      required List<String>? interest}) = _Profile;
+      required List<String>? interests}) = _Profile;
 
   factory Profile.empty() => const Profile(
       email: '',
@@ -22,5 +22,5 @@ abstract class Profile with _$Profile {
       horoscope: '',
       height: 0,
       weight: 0,
-      interest: []);
+      interests: []);
 }

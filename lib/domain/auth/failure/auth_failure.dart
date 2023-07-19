@@ -8,4 +8,5 @@ abstract class AuthFailure with _$AuthFailure {
   const factory AuthFailure.unauthenticated() = _Unauthenticated;
   const factory AuthFailure.tokenNotProvided() = _TokenNotProvided;
   const factory AuthFailure.badRequest() = _BadRequest;
-}
+  const factory AuthFailure.invalidEmailAndPasswordCombination() = _InvalidEmailAndPassword;
+  }

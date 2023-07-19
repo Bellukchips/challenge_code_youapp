@@ -15,7 +15,7 @@ _$_ProfileDto _$$_ProfileDtoFromJson(Map<String, dynamic> json) =>
       horoscope: json['horoscope'] as String?,
       height: json['height'] as int?,
       weight: json['weight'] as int?,
-      interest: (json['interest'] as List<dynamic>?)
+      interests: (json['interests'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
     );
@@ -29,5 +29,5 @@ Map<String, dynamic> _$$_ProfileDtoToJson(_$_ProfileDto instance) =>
       'horoscope': instance.horoscope,
       'height': instance.height,
       'weight': instance.weight,
-      'interest': instance.interest,
+      'interests': instance.interests,
     };

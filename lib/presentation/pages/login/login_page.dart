@@ -33,6 +33,8 @@ class _LoginPageState extends State<LoginPage> {
                   unauthenticated: (value) => 'Unauthenticated',
                   unexpected: (value) => 'Unexpected error ${value.error}',
                   serverError: (value) => 'Server error',
+                  invalidEmailAndPasswordCombination: (value) =>
+                      'Invalid Email and Password',
                 )),
                 duration: const Duration(seconds: 2),
               );

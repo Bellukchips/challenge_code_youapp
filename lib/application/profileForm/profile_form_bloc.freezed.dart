@@ -23,8 +23,10 @@ mixin _$ProfileFormEvent {
     required TResult Function(String value) birthdayChanged,
     required TResult Function(int value) heightChanged,
     required TResult Function(int value) weightChanged,
+    required TResult Function(List<String> interests) interestChanged,
     required TResult Function(ProfileForm form) createProfile,
     required TResult Function(ProfileForm form) updateProfile,
+    required TResult Function(List<String> interests) updateInterests,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -34,8 +36,10 @@ mixin _$ProfileFormEvent {
     TResult? Function(String value)? birthdayChanged,
     TResult? Function(int value)? heightChanged,
     TResult? Function(int value)? weightChanged,
+    TResult? Function(List<String> interests)? interestChanged,
     TResult? Function(ProfileForm form)? createProfile,
     TResult? Function(ProfileForm form)? updateProfile,
+    TResult? Function(List<String> interests)? updateInterests,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -45,8 +49,10 @@ mixin _$ProfileFormEvent {
     TResult Function(String value)? birthdayChanged,
     TResult Function(int value)? heightChanged,
     TResult Function(int value)? weightChanged,
+    TResult Function(List<String> interests)? interestChanged,
     TResult Function(ProfileForm form)? createProfile,
     TResult Function(ProfileForm form)? updateProfile,
+    TResult Function(List<String> interests)? updateInterests,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -57,8 +63,10 @@ mixin _$ProfileFormEvent {
     required TResult Function(_BirthdayChanged value) birthdayChanged,
     required TResult Function(_HeightChanged value) heightChanged,
     required TResult Function(_WeightChanged value) weightChanged,
+    required TResult Function(_InterestChanged value) interestChanged,
     required TResult Function(_CreateProfile value) createProfile,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_UpdateInterests value) updateInterests,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,8 +76,10 @@ mixin _$ProfileFormEvent {
     TResult? Function(_BirthdayChanged value)? birthdayChanged,
     TResult? Function(_HeightChanged value)? heightChanged,
     TResult? Function(_WeightChanged value)? weightChanged,
+    TResult? Function(_InterestChanged value)? interestChanged,
     TResult? Function(_CreateProfile value)? createProfile,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_UpdateInterests value)? updateInterests,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -79,8 +89,10 @@ mixin _$ProfileFormEvent {
     TResult Function(_BirthdayChanged value)? birthdayChanged,
     TResult Function(_HeightChanged value)? heightChanged,
     TResult Function(_WeightChanged value)? weightChanged,
+    TResult Function(_InterestChanged value)? interestChanged,
     TResult Function(_CreateProfile value)? createProfile,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_UpdateInterests value)? updateInterests,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -146,8 +158,10 @@ class _$_Started implements _Started {
     required TResult Function(String value) birthdayChanged,
     required TResult Function(int value) heightChanged,
     required TResult Function(int value) weightChanged,
+    required TResult Function(List<String> interests) interestChanged,
     required TResult Function(ProfileForm form) createProfile,
     required TResult Function(ProfileForm form) updateProfile,
+    required TResult Function(List<String> interests) updateInterests,
   }) {
     return started();
   }
@@ -160,8 +174,10 @@ class _$_Started implements _Started {
     TResult? Function(String value)? birthdayChanged,
     TResult? Function(int value)? heightChanged,
     TResult? Function(int value)? weightChanged,
+    TResult? Function(List<String> interests)? interestChanged,
     TResult? Function(ProfileForm form)? createProfile,
     TResult? Function(ProfileForm form)? updateProfile,
+    TResult? Function(List<String> interests)? updateInterests,
   }) {
     return started?.call();
   }
@@ -174,8 +190,10 @@ class _$_Started implements _Started {
     TResult Function(String value)? birthdayChanged,
     TResult Function(int value)? heightChanged,
     TResult Function(int value)? weightChanged,
+    TResult Function(List<String> interests)? interestChanged,
     TResult Function(ProfileForm form)? createProfile,
     TResult Function(ProfileForm form)? updateProfile,
+    TResult Function(List<String> interests)? updateInterests,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -192,8 +210,10 @@ class _$_Started implements _Started {
     required TResult Function(_BirthdayChanged value) birthdayChanged,
     required TResult Function(_HeightChanged value) heightChanged,
     required TResult Function(_WeightChanged value) weightChanged,
+    required TResult Function(_InterestChanged value) interestChanged,
     required TResult Function(_CreateProfile value) createProfile,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_UpdateInterests value) updateInterests,
   }) {
     return started(this);
   }
@@ -206,8 +226,10 @@ class _$_Started implements _Started {
     TResult? Function(_BirthdayChanged value)? birthdayChanged,
     TResult? Function(_HeightChanged value)? heightChanged,
     TResult? Function(_WeightChanged value)? weightChanged,
+    TResult? Function(_InterestChanged value)? interestChanged,
     TResult? Function(_CreateProfile value)? createProfile,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_UpdateInterests value)? updateInterests,
   }) {
     return started?.call(this);
   }
@@ -220,8 +242,10 @@ class _$_Started implements _Started {
     TResult Function(_BirthdayChanged value)? birthdayChanged,
     TResult Function(_HeightChanged value)? heightChanged,
     TResult Function(_WeightChanged value)? weightChanged,
+    TResult Function(_InterestChanged value)? interestChanged,
     TResult Function(_CreateProfile value)? createProfile,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_UpdateInterests value)? updateInterests,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -304,8 +328,10 @@ class _$_NameChanged implements _NameChanged {
     required TResult Function(String value) birthdayChanged,
     required TResult Function(int value) heightChanged,
     required TResult Function(int value) weightChanged,
+    required TResult Function(List<String> interests) interestChanged,
     required TResult Function(ProfileForm form) createProfile,
     required TResult Function(ProfileForm form) updateProfile,
+    required TResult Function(List<String> interests) updateInterests,
   }) {
     return nameChanged(value);
   }
@@ -318,8 +344,10 @@ class _$_NameChanged implements _NameChanged {
     TResult? Function(String value)? birthdayChanged,
     TResult? Function(int value)? heightChanged,
     TResult? Function(int value)? weightChanged,
+    TResult? Function(List<String> interests)? interestChanged,
     TResult? Function(ProfileForm form)? createProfile,
     TResult? Function(ProfileForm form)? updateProfile,
+    TResult? Function(List<String> interests)? updateInterests,
   }) {
     return nameChanged?.call(value);
   }
@@ -332,8 +360,10 @@ class _$_NameChanged implements _NameChanged {
     TResult Function(String value)? birthdayChanged,
     TResult Function(int value)? heightChanged,
     TResult Function(int value)? weightChanged,
+    TResult Function(List<String> interests)? interestChanged,
     TResult Function(ProfileForm form)? createProfile,
     TResult Function(ProfileForm form)? updateProfile,
+    TResult Function(List<String> interests)? updateInterests,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -350,8 +380,10 @@ class _$_NameChanged implements _NameChanged {
     required TResult Function(_BirthdayChanged value) birthdayChanged,
     required TResult Function(_HeightChanged value) heightChanged,
     required TResult Function(_WeightChanged value) weightChanged,
+    required TResult Function(_InterestChanged value) interestChanged,
     required TResult Function(_CreateProfile value) createProfile,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_UpdateInterests value) updateInterests,
   }) {
     return nameChanged(this);
   }
@@ -364,8 +396,10 @@ class _$_NameChanged implements _NameChanged {
     TResult? Function(_BirthdayChanged value)? birthdayChanged,
     TResult? Function(_HeightChanged value)? heightChanged,
     TResult? Function(_WeightChanged value)? weightChanged,
+    TResult? Function(_InterestChanged value)? interestChanged,
     TResult? Function(_CreateProfile value)? createProfile,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_UpdateInterests value)? updateInterests,
   }) {
     return nameChanged?.call(this);
   }
@@ -378,8 +412,10 @@ class _$_NameChanged implements _NameChanged {
     TResult Function(_BirthdayChanged value)? birthdayChanged,
     TResult Function(_HeightChanged value)? heightChanged,
     TResult Function(_WeightChanged value)? weightChanged,
+    TResult Function(_InterestChanged value)? interestChanged,
     TResult Function(_CreateProfile value)? createProfile,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_UpdateInterests value)? updateInterests,
     required TResult orElse(),
   }) {
     if (nameChanged != null) {
@@ -467,8 +503,10 @@ class _$_BirthdayChanged implements _BirthdayChanged {
     required TResult Function(String value) birthdayChanged,
     required TResult Function(int value) heightChanged,
     required TResult Function(int value) weightChanged,
+    required TResult Function(List<String> interests) interestChanged,
     required TResult Function(ProfileForm form) createProfile,
     required TResult Function(ProfileForm form) updateProfile,
+    required TResult Function(List<String> interests) updateInterests,
   }) {
     return birthdayChanged(value);
   }
@@ -481,8 +519,10 @@ class _$_BirthdayChanged implements _BirthdayChanged {
     TResult? Function(String value)? birthdayChanged,
     TResult? Function(int value)? heightChanged,
     TResult? Function(int value)? weightChanged,
+    TResult? Function(List<String> interests)? interestChanged,
     TResult? Function(ProfileForm form)? createProfile,
     TResult? Function(ProfileForm form)? updateProfile,
+    TResult? Function(List<String> interests)? updateInterests,
   }) {
     return birthdayChanged?.call(value);
   }
@@ -495,8 +535,10 @@ class _$_BirthdayChanged implements _BirthdayChanged {
     TResult Function(String value)? birthdayChanged,
     TResult Function(int value)? heightChanged,
     TResult Function(int value)? weightChanged,
+    TResult Function(List<String> interests)? interestChanged,
     TResult Function(ProfileForm form)? createProfile,
     TResult Function(ProfileForm form)? updateProfile,
+    TResult Function(List<String> interests)? updateInterests,
     required TResult orElse(),
   }) {
     if (birthdayChanged != null) {
@@ -513,8 +555,10 @@ class _$_BirthdayChanged implements _BirthdayChanged {
     required TResult Function(_BirthdayChanged value) birthdayChanged,
     required TResult Function(_HeightChanged value) heightChanged,
     required TResult Function(_WeightChanged value) weightChanged,
+    required TResult Function(_InterestChanged value) interestChanged,
     required TResult Function(_CreateProfile value) createProfile,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_UpdateInterests value) updateInterests,
   }) {
     return birthdayChanged(this);
   }
@@ -527,8 +571,10 @@ class _$_BirthdayChanged implements _BirthdayChanged {
     TResult? Function(_BirthdayChanged value)? birthdayChanged,
     TResult? Function(_HeightChanged value)? heightChanged,
     TResult? Function(_WeightChanged value)? weightChanged,
+    TResult? Function(_InterestChanged value)? interestChanged,
     TResult? Function(_CreateProfile value)? createProfile,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_UpdateInterests value)? updateInterests,
   }) {
     return birthdayChanged?.call(this);
   }
@@ -541,8 +587,10 @@ class _$_BirthdayChanged implements _BirthdayChanged {
     TResult Function(_BirthdayChanged value)? birthdayChanged,
     TResult Function(_HeightChanged value)? heightChanged,
     TResult Function(_WeightChanged value)? weightChanged,
+    TResult Function(_InterestChanged value)? interestChanged,
     TResult Function(_CreateProfile value)? createProfile,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_UpdateInterests value)? updateInterests,
     required TResult orElse(),
   }) {
     if (birthdayChanged != null) {
@@ -630,8 +678,10 @@ class _$_HeightChanged implements _HeightChanged {
     required TResult Function(String value) birthdayChanged,
     required TResult Function(int value) heightChanged,
     required TResult Function(int value) weightChanged,
+    required TResult Function(List<String> interests) interestChanged,
     required TResult Function(ProfileForm form) createProfile,
     required TResult Function(ProfileForm form) updateProfile,
+    required TResult Function(List<String> interests) updateInterests,
   }) {
     return heightChanged(value);
   }
@@ -644,8 +694,10 @@ class _$_HeightChanged implements _HeightChanged {
     TResult? Function(String value)? birthdayChanged,
     TResult? Function(int value)? heightChanged,
     TResult? Function(int value)? weightChanged,
+    TResult? Function(List<String> interests)? interestChanged,
     TResult? Function(ProfileForm form)? createProfile,
     TResult? Function(ProfileForm form)? updateProfile,
+    TResult? Function(List<String> interests)? updateInterests,
   }) {
     return heightChanged?.call(value);
   }
@@ -658,8 +710,10 @@ class _$_HeightChanged implements _HeightChanged {
     TResult Function(String value)? birthdayChanged,
     TResult Function(int value)? heightChanged,
     TResult Function(int value)? weightChanged,
+    TResult Function(List<String> interests)? interestChanged,
     TResult Function(ProfileForm form)? createProfile,
     TResult Function(ProfileForm form)? updateProfile,
+    TResult Function(List<String> interests)? updateInterests,
     required TResult orElse(),
   }) {
     if (heightChanged != null) {
@@ -676,8 +730,10 @@ class _$_HeightChanged implements _HeightChanged {
     required TResult Function(_BirthdayChanged value) birthdayChanged,
     required TResult Function(_HeightChanged value) heightChanged,
     required TResult Function(_WeightChanged value) weightChanged,
+    required TResult Function(_InterestChanged value) interestChanged,
     required TResult Function(_CreateProfile value) createProfile,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_UpdateInterests value) updateInterests,
   }) {
     return heightChanged(this);
   }
@@ -690,8 +746,10 @@ class _$_HeightChanged implements _HeightChanged {
     TResult? Function(_BirthdayChanged value)? birthdayChanged,
     TResult? Function(_HeightChanged value)? heightChanged,
     TResult? Function(_WeightChanged value)? weightChanged,
+    TResult? Function(_InterestChanged value)? interestChanged,
     TResult? Function(_CreateProfile value)? createProfile,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_UpdateInterests value)? updateInterests,
   }) {
     return heightChanged?.call(this);
   }
@@ -704,8 +762,10 @@ class _$_HeightChanged implements _HeightChanged {
     TResult Function(_BirthdayChanged value)? birthdayChanged,
     TResult Function(_HeightChanged value)? heightChanged,
     TResult Function(_WeightChanged value)? weightChanged,
+    TResult Function(_InterestChanged value)? interestChanged,
     TResult Function(_CreateProfile value)? createProfile,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_UpdateInterests value)? updateInterests,
     required TResult orElse(),
   }) {
     if (heightChanged != null) {
@@ -793,8 +853,10 @@ class _$_WeightChanged implements _WeightChanged {
     required TResult Function(String value) birthdayChanged,
     required TResult Function(int value) heightChanged,
     required TResult Function(int value) weightChanged,
+    required TResult Function(List<String> interests) interestChanged,
     required TResult Function(ProfileForm form) createProfile,
     required TResult Function(ProfileForm form) updateProfile,
+    required TResult Function(List<String> interests) updateInterests,
   }) {
     return weightChanged(value);
   }
@@ -807,8 +869,10 @@ class _$_WeightChanged implements _WeightChanged {
     TResult? Function(String value)? birthdayChanged,
     TResult? Function(int value)? heightChanged,
     TResult? Function(int value)? weightChanged,
+    TResult? Function(List<String> interests)? interestChanged,
     TResult? Function(ProfileForm form)? createProfile,
     TResult? Function(ProfileForm form)? updateProfile,
+    TResult? Function(List<String> interests)? updateInterests,
   }) {
     return weightChanged?.call(value);
   }
@@ -821,8 +885,10 @@ class _$_WeightChanged implements _WeightChanged {
     TResult Function(String value)? birthdayChanged,
     TResult Function(int value)? heightChanged,
     TResult Function(int value)? weightChanged,
+    TResult Function(List<String> interests)? interestChanged,
     TResult Function(ProfileForm form)? createProfile,
     TResult Function(ProfileForm form)? updateProfile,
+    TResult Function(List<String> interests)? updateInterests,
     required TResult orElse(),
   }) {
     if (weightChanged != null) {
@@ -839,8 +905,10 @@ class _$_WeightChanged implements _WeightChanged {
     required TResult Function(_BirthdayChanged value) birthdayChanged,
     required TResult Function(_HeightChanged value) heightChanged,
     required TResult Function(_WeightChanged value) weightChanged,
+    required TResult Function(_InterestChanged value) interestChanged,
     required TResult Function(_CreateProfile value) createProfile,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_UpdateInterests value) updateInterests,
   }) {
     return weightChanged(this);
   }
@@ -853,8 +921,10 @@ class _$_WeightChanged implements _WeightChanged {
     TResult? Function(_BirthdayChanged value)? birthdayChanged,
     TResult? Function(_HeightChanged value)? heightChanged,
     TResult? Function(_WeightChanged value)? weightChanged,
+    TResult? Function(_InterestChanged value)? interestChanged,
     TResult? Function(_CreateProfile value)? createProfile,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_UpdateInterests value)? updateInterests,
   }) {
     return weightChanged?.call(this);
   }
@@ -867,8 +937,10 @@ class _$_WeightChanged implements _WeightChanged {
     TResult Function(_BirthdayChanged value)? birthdayChanged,
     TResult Function(_HeightChanged value)? heightChanged,
     TResult Function(_WeightChanged value)? weightChanged,
+    TResult Function(_InterestChanged value)? interestChanged,
     TResult Function(_CreateProfile value)? createProfile,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_UpdateInterests value)? updateInterests,
     required TResult orElse(),
   }) {
     if (weightChanged != null) {
@@ -884,6 +956,190 @@ abstract class _WeightChanged implements ProfileFormEvent {
   int get value;
   @JsonKey(ignore: true)
   _$$_WeightChangedCopyWith<_$_WeightChanged> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_InterestChangedCopyWith<$Res> {
+  factory _$$_InterestChangedCopyWith(
+          _$_InterestChanged value, $Res Function(_$_InterestChanged) then) =
+      __$$_InterestChangedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<String> interests});
+}
+
+/// @nodoc
+class __$$_InterestChangedCopyWithImpl<$Res>
+    extends _$ProfileFormEventCopyWithImpl<$Res, _$_InterestChanged>
+    implements _$$_InterestChangedCopyWith<$Res> {
+  __$$_InterestChangedCopyWithImpl(
+      _$_InterestChanged _value, $Res Function(_$_InterestChanged) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? interests = null,
+  }) {
+    return _then(_$_InterestChanged(
+      null == interests
+          ? _value._interests
+          : interests // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_InterestChanged implements _InterestChanged {
+  const _$_InterestChanged(final List<String> interests)
+      : _interests = interests;
+
+  final List<String> _interests;
+  @override
+  List<String> get interests {
+    if (_interests is EqualUnmodifiableListView) return _interests;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_interests);
+  }
+
+  @override
+  String toString() {
+    return 'ProfileFormEvent.interestChanged(interests: $interests)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InterestChanged &&
+            const DeepCollectionEquality()
+                .equals(other._interests, _interests));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_interests));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InterestChangedCopyWith<_$_InterestChanged> get copyWith =>
+      __$$_InterestChangedCopyWithImpl<_$_InterestChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String value) nameChanged,
+    required TResult Function(String value) birthdayChanged,
+    required TResult Function(int value) heightChanged,
+    required TResult Function(int value) weightChanged,
+    required TResult Function(List<String> interests) interestChanged,
+    required TResult Function(ProfileForm form) createProfile,
+    required TResult Function(ProfileForm form) updateProfile,
+    required TResult Function(List<String> interests) updateInterests,
+  }) {
+    return interestChanged(interests);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String value)? nameChanged,
+    TResult? Function(String value)? birthdayChanged,
+    TResult? Function(int value)? heightChanged,
+    TResult? Function(int value)? weightChanged,
+    TResult? Function(List<String> interests)? interestChanged,
+    TResult? Function(ProfileForm form)? createProfile,
+    TResult? Function(ProfileForm form)? updateProfile,
+    TResult? Function(List<String> interests)? updateInterests,
+  }) {
+    return interestChanged?.call(interests);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String value)? nameChanged,
+    TResult Function(String value)? birthdayChanged,
+    TResult Function(int value)? heightChanged,
+    TResult Function(int value)? weightChanged,
+    TResult Function(List<String> interests)? interestChanged,
+    TResult Function(ProfileForm form)? createProfile,
+    TResult Function(ProfileForm form)? updateProfile,
+    TResult Function(List<String> interests)? updateInterests,
+    required TResult orElse(),
+  }) {
+    if (interestChanged != null) {
+      return interestChanged(interests);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_BirthdayChanged value) birthdayChanged,
+    required TResult Function(_HeightChanged value) heightChanged,
+    required TResult Function(_WeightChanged value) weightChanged,
+    required TResult Function(_InterestChanged value) interestChanged,
+    required TResult Function(_CreateProfile value) createProfile,
+    required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_UpdateInterests value) updateInterests,
+  }) {
+    return interestChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_BirthdayChanged value)? birthdayChanged,
+    TResult? Function(_HeightChanged value)? heightChanged,
+    TResult? Function(_WeightChanged value)? weightChanged,
+    TResult? Function(_InterestChanged value)? interestChanged,
+    TResult? Function(_CreateProfile value)? createProfile,
+    TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_UpdateInterests value)? updateInterests,
+  }) {
+    return interestChanged?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_BirthdayChanged value)? birthdayChanged,
+    TResult Function(_HeightChanged value)? heightChanged,
+    TResult Function(_WeightChanged value)? weightChanged,
+    TResult Function(_InterestChanged value)? interestChanged,
+    TResult Function(_CreateProfile value)? createProfile,
+    TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_UpdateInterests value)? updateInterests,
+    required TResult orElse(),
+  }) {
+    if (interestChanged != null) {
+      return interestChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _InterestChanged implements ProfileFormEvent {
+  const factory _InterestChanged(final List<String> interests) =
+      _$_InterestChanged;
+
+  List<String> get interests;
+  @JsonKey(ignore: true)
+  _$$_InterestChangedCopyWith<_$_InterestChanged> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -966,8 +1222,10 @@ class _$_CreateProfile implements _CreateProfile {
     required TResult Function(String value) birthdayChanged,
     required TResult Function(int value) heightChanged,
     required TResult Function(int value) weightChanged,
+    required TResult Function(List<String> interests) interestChanged,
     required TResult Function(ProfileForm form) createProfile,
     required TResult Function(ProfileForm form) updateProfile,
+    required TResult Function(List<String> interests) updateInterests,
   }) {
     return createProfile(form);
   }
@@ -980,8 +1238,10 @@ class _$_CreateProfile implements _CreateProfile {
     TResult? Function(String value)? birthdayChanged,
     TResult? Function(int value)? heightChanged,
     TResult? Function(int value)? weightChanged,
+    TResult? Function(List<String> interests)? interestChanged,
     TResult? Function(ProfileForm form)? createProfile,
     TResult? Function(ProfileForm form)? updateProfile,
+    TResult? Function(List<String> interests)? updateInterests,
   }) {
     return createProfile?.call(form);
   }
@@ -994,8 +1254,10 @@ class _$_CreateProfile implements _CreateProfile {
     TResult Function(String value)? birthdayChanged,
     TResult Function(int value)? heightChanged,
     TResult Function(int value)? weightChanged,
+    TResult Function(List<String> interests)? interestChanged,
     TResult Function(ProfileForm form)? createProfile,
     TResult Function(ProfileForm form)? updateProfile,
+    TResult Function(List<String> interests)? updateInterests,
     required TResult orElse(),
   }) {
     if (createProfile != null) {
@@ -1012,8 +1274,10 @@ class _$_CreateProfile implements _CreateProfile {
     required TResult Function(_BirthdayChanged value) birthdayChanged,
     required TResult Function(_HeightChanged value) heightChanged,
     required TResult Function(_WeightChanged value) weightChanged,
+    required TResult Function(_InterestChanged value) interestChanged,
     required TResult Function(_CreateProfile value) createProfile,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_UpdateInterests value) updateInterests,
   }) {
     return createProfile(this);
   }
@@ -1026,8 +1290,10 @@ class _$_CreateProfile implements _CreateProfile {
     TResult? Function(_BirthdayChanged value)? birthdayChanged,
     TResult? Function(_HeightChanged value)? heightChanged,
     TResult? Function(_WeightChanged value)? weightChanged,
+    TResult? Function(_InterestChanged value)? interestChanged,
     TResult? Function(_CreateProfile value)? createProfile,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_UpdateInterests value)? updateInterests,
   }) {
     return createProfile?.call(this);
   }
@@ -1040,8 +1306,10 @@ class _$_CreateProfile implements _CreateProfile {
     TResult Function(_BirthdayChanged value)? birthdayChanged,
     TResult Function(_HeightChanged value)? heightChanged,
     TResult Function(_WeightChanged value)? weightChanged,
+    TResult Function(_InterestChanged value)? interestChanged,
     TResult Function(_CreateProfile value)? createProfile,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_UpdateInterests value)? updateInterests,
     required TResult orElse(),
   }) {
     if (createProfile != null) {
@@ -1139,8 +1407,10 @@ class _$_UpdateProfile implements _UpdateProfile {
     required TResult Function(String value) birthdayChanged,
     required TResult Function(int value) heightChanged,
     required TResult Function(int value) weightChanged,
+    required TResult Function(List<String> interests) interestChanged,
     required TResult Function(ProfileForm form) createProfile,
     required TResult Function(ProfileForm form) updateProfile,
+    required TResult Function(List<String> interests) updateInterests,
   }) {
     return updateProfile(form);
   }
@@ -1153,8 +1423,10 @@ class _$_UpdateProfile implements _UpdateProfile {
     TResult? Function(String value)? birthdayChanged,
     TResult? Function(int value)? heightChanged,
     TResult? Function(int value)? weightChanged,
+    TResult? Function(List<String> interests)? interestChanged,
     TResult? Function(ProfileForm form)? createProfile,
     TResult? Function(ProfileForm form)? updateProfile,
+    TResult? Function(List<String> interests)? updateInterests,
   }) {
     return updateProfile?.call(form);
   }
@@ -1167,8 +1439,10 @@ class _$_UpdateProfile implements _UpdateProfile {
     TResult Function(String value)? birthdayChanged,
     TResult Function(int value)? heightChanged,
     TResult Function(int value)? weightChanged,
+    TResult Function(List<String> interests)? interestChanged,
     TResult Function(ProfileForm form)? createProfile,
     TResult Function(ProfileForm form)? updateProfile,
+    TResult Function(List<String> interests)? updateInterests,
     required TResult orElse(),
   }) {
     if (updateProfile != null) {
@@ -1185,8 +1459,10 @@ class _$_UpdateProfile implements _UpdateProfile {
     required TResult Function(_BirthdayChanged value) birthdayChanged,
     required TResult Function(_HeightChanged value) heightChanged,
     required TResult Function(_WeightChanged value) weightChanged,
+    required TResult Function(_InterestChanged value) interestChanged,
     required TResult Function(_CreateProfile value) createProfile,
     required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_UpdateInterests value) updateInterests,
   }) {
     return updateProfile(this);
   }
@@ -1199,8 +1475,10 @@ class _$_UpdateProfile implements _UpdateProfile {
     TResult? Function(_BirthdayChanged value)? birthdayChanged,
     TResult? Function(_HeightChanged value)? heightChanged,
     TResult? Function(_WeightChanged value)? weightChanged,
+    TResult? Function(_InterestChanged value)? interestChanged,
     TResult? Function(_CreateProfile value)? createProfile,
     TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_UpdateInterests value)? updateInterests,
   }) {
     return updateProfile?.call(this);
   }
@@ -1213,8 +1491,10 @@ class _$_UpdateProfile implements _UpdateProfile {
     TResult Function(_BirthdayChanged value)? birthdayChanged,
     TResult Function(_HeightChanged value)? heightChanged,
     TResult Function(_WeightChanged value)? weightChanged,
+    TResult Function(_InterestChanged value)? interestChanged,
     TResult Function(_CreateProfile value)? createProfile,
     TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_UpdateInterests value)? updateInterests,
     required TResult orElse(),
   }) {
     if (updateProfile != null) {
@@ -1234,8 +1514,193 @@ abstract class _UpdateProfile implements ProfileFormEvent {
 }
 
 /// @nodoc
+abstract class _$$_UpdateInterestsCopyWith<$Res> {
+  factory _$$_UpdateInterestsCopyWith(
+          _$_UpdateInterests value, $Res Function(_$_UpdateInterests) then) =
+      __$$_UpdateInterestsCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<String> interests});
+}
+
+/// @nodoc
+class __$$_UpdateInterestsCopyWithImpl<$Res>
+    extends _$ProfileFormEventCopyWithImpl<$Res, _$_UpdateInterests>
+    implements _$$_UpdateInterestsCopyWith<$Res> {
+  __$$_UpdateInterestsCopyWithImpl(
+      _$_UpdateInterests _value, $Res Function(_$_UpdateInterests) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? interests = null,
+  }) {
+    return _then(_$_UpdateInterests(
+      null == interests
+          ? _value._interests
+          : interests // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_UpdateInterests implements _UpdateInterests {
+  const _$_UpdateInterests(final List<String> interests)
+      : _interests = interests;
+
+  final List<String> _interests;
+  @override
+  List<String> get interests {
+    if (_interests is EqualUnmodifiableListView) return _interests;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_interests);
+  }
+
+  @override
+  String toString() {
+    return 'ProfileFormEvent.updateInterests(interests: $interests)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_UpdateInterests &&
+            const DeepCollectionEquality()
+                .equals(other._interests, _interests));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_interests));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UpdateInterestsCopyWith<_$_UpdateInterests> get copyWith =>
+      __$$_UpdateInterestsCopyWithImpl<_$_UpdateInterests>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() started,
+    required TResult Function(String value) nameChanged,
+    required TResult Function(String value) birthdayChanged,
+    required TResult Function(int value) heightChanged,
+    required TResult Function(int value) weightChanged,
+    required TResult Function(List<String> interests) interestChanged,
+    required TResult Function(ProfileForm form) createProfile,
+    required TResult Function(ProfileForm form) updateProfile,
+    required TResult Function(List<String> interests) updateInterests,
+  }) {
+    return updateInterests(interests);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? started,
+    TResult? Function(String value)? nameChanged,
+    TResult? Function(String value)? birthdayChanged,
+    TResult? Function(int value)? heightChanged,
+    TResult? Function(int value)? weightChanged,
+    TResult? Function(List<String> interests)? interestChanged,
+    TResult? Function(ProfileForm form)? createProfile,
+    TResult? Function(ProfileForm form)? updateProfile,
+    TResult? Function(List<String> interests)? updateInterests,
+  }) {
+    return updateInterests?.call(interests);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? started,
+    TResult Function(String value)? nameChanged,
+    TResult Function(String value)? birthdayChanged,
+    TResult Function(int value)? heightChanged,
+    TResult Function(int value)? weightChanged,
+    TResult Function(List<String> interests)? interestChanged,
+    TResult Function(ProfileForm form)? createProfile,
+    TResult Function(ProfileForm form)? updateProfile,
+    TResult Function(List<String> interests)? updateInterests,
+    required TResult orElse(),
+  }) {
+    if (updateInterests != null) {
+      return updateInterests(interests);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Started value) started,
+    required TResult Function(_NameChanged value) nameChanged,
+    required TResult Function(_BirthdayChanged value) birthdayChanged,
+    required TResult Function(_HeightChanged value) heightChanged,
+    required TResult Function(_WeightChanged value) weightChanged,
+    required TResult Function(_InterestChanged value) interestChanged,
+    required TResult Function(_CreateProfile value) createProfile,
+    required TResult Function(_UpdateProfile value) updateProfile,
+    required TResult Function(_UpdateInterests value) updateInterests,
+  }) {
+    return updateInterests(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Started value)? started,
+    TResult? Function(_NameChanged value)? nameChanged,
+    TResult? Function(_BirthdayChanged value)? birthdayChanged,
+    TResult? Function(_HeightChanged value)? heightChanged,
+    TResult? Function(_WeightChanged value)? weightChanged,
+    TResult? Function(_InterestChanged value)? interestChanged,
+    TResult? Function(_CreateProfile value)? createProfile,
+    TResult? Function(_UpdateProfile value)? updateProfile,
+    TResult? Function(_UpdateInterests value)? updateInterests,
+  }) {
+    return updateInterests?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Started value)? started,
+    TResult Function(_NameChanged value)? nameChanged,
+    TResult Function(_BirthdayChanged value)? birthdayChanged,
+    TResult Function(_HeightChanged value)? heightChanged,
+    TResult Function(_WeightChanged value)? weightChanged,
+    TResult Function(_InterestChanged value)? interestChanged,
+    TResult Function(_CreateProfile value)? createProfile,
+    TResult Function(_UpdateProfile value)? updateProfile,
+    TResult Function(_UpdateInterests value)? updateInterests,
+    required TResult orElse(),
+  }) {
+    if (updateInterests != null) {
+      return updateInterests(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateInterests implements ProfileFormEvent {
+  const factory _UpdateInterests(final List<String> interests) =
+      _$_UpdateInterests;
+
+  List<String> get interests;
+  @JsonKey(ignore: true)
+  _$$_UpdateInterestsCopyWith<_$_UpdateInterests> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$ProfileFormState {
   ProfileForm get form => throw _privateConstructorUsedError;
+  List<String> get interests => throw _privateConstructorUsedError;
   bool get isSubmitting => throw _privateConstructorUsedError;
   Option<Either<AuthFailure, Profile>> get createProfileFailureOption =>
       throw _privateConstructorUsedError;
@@ -1253,6 +1718,7 @@ abstract class $ProfileFormStateCopyWith<$Res> {
   @useResult
   $Res call(
       {ProfileForm form,
+      List<String> interests,
       bool isSubmitting,
       Option<Either<AuthFailure, Profile>> createProfileFailureOption});
 
@@ -1273,6 +1739,7 @@ class _$ProfileFormStateCopyWithImpl<$Res, $Val extends ProfileFormState>
   @override
   $Res call({
     Object? form = null,
+    Object? interests = null,
     Object? isSubmitting = null,
     Object? createProfileFailureOption = null,
   }) {
@@ -1281,6 +1748,10 @@ class _$ProfileFormStateCopyWithImpl<$Res, $Val extends ProfileFormState>
           ? _value.form
           : form // ignore: cast_nullable_to_non_nullable
               as ProfileForm,
+      interests: null == interests
+          ? _value.interests
+          : interests // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       isSubmitting: null == isSubmitting
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
@@ -1311,6 +1782,7 @@ abstract class _$$_ProfileFormStateCopyWith<$Res>
   @useResult
   $Res call(
       {ProfileForm form,
+      List<String> interests,
       bool isSubmitting,
       Option<Either<AuthFailure, Profile>> createProfileFailureOption});
 
@@ -1330,6 +1802,7 @@ class __$$_ProfileFormStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? form = null,
+    Object? interests = null,
     Object? isSubmitting = null,
     Object? createProfileFailureOption = null,
   }) {
@@ -1338,6 +1811,10 @@ class __$$_ProfileFormStateCopyWithImpl<$Res>
           ? _value.form
           : form // ignore: cast_nullable_to_non_nullable
               as ProfileForm,
+      interests: null == interests
+          ? _value._interests
+          : interests // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       isSubmitting: null == isSubmitting
           ? _value.isSubmitting
           : isSubmitting // ignore: cast_nullable_to_non_nullable
@@ -1355,11 +1832,21 @@ class __$$_ProfileFormStateCopyWithImpl<$Res>
 class _$_ProfileFormState implements _ProfileFormState {
   const _$_ProfileFormState(
       {required this.form,
+      required final List<String> interests,
       required this.isSubmitting,
-      required this.createProfileFailureOption});
+      required this.createProfileFailureOption})
+      : _interests = interests;
 
   @override
   final ProfileForm form;
+  final List<String> _interests;
+  @override
+  List<String> get interests {
+    if (_interests is EqualUnmodifiableListView) return _interests;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_interests);
+  }
+
   @override
   final bool isSubmitting;
   @override
@@ -1367,7 +1854,7 @@ class _$_ProfileFormState implements _ProfileFormState {
 
   @override
   String toString() {
-    return 'ProfileFormState(form: $form, isSubmitting: $isSubmitting, createProfileFailureOption: $createProfileFailureOption)';
+    return 'ProfileFormState(form: $form, interests: $interests, isSubmitting: $isSubmitting, createProfileFailureOption: $createProfileFailureOption)';
   }
 
   @override
@@ -1376,6 +1863,8 @@ class _$_ProfileFormState implements _ProfileFormState {
         (other.runtimeType == runtimeType &&
             other is _$_ProfileFormState &&
             (identical(other.form, form) || other.form == form) &&
+            const DeepCollectionEquality()
+                .equals(other._interests, _interests) &&
             (identical(other.isSubmitting, isSubmitting) ||
                 other.isSubmitting == isSubmitting) &&
             (identical(other.createProfileFailureOption,
@@ -1385,8 +1874,12 @@ class _$_ProfileFormState implements _ProfileFormState {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, form, isSubmitting, createProfileFailureOption);
+  int get hashCode => Object.hash(
+      runtimeType,
+      form,
+      const DeepCollectionEquality().hash(_interests),
+      isSubmitting,
+      createProfileFailureOption);
 
   @JsonKey(ignore: true)
   @override
@@ -1398,12 +1891,15 @@ class _$_ProfileFormState implements _ProfileFormState {
 abstract class _ProfileFormState implements ProfileFormState {
   const factory _ProfileFormState(
       {required final ProfileForm form,
+      required final List<String> interests,
       required final bool isSubmitting,
       required final Option<Either<AuthFailure, Profile>>
           createProfileFailureOption}) = _$_ProfileFormState;
 
   @override
   ProfileForm get form;
+  @override
+  List<String> get interests;
   @override
   bool get isSubmitting;
   @override

@@ -41,6 +41,9 @@ class ProfileFormBloc extends Bloc<ProfileFormEvent, ProfileFormState> {
       final weight = FormIntegerValue(event.value);
       emit(state.copyWith(form: state.form.copyWith(weight: weight)));
     });
+    on<_InterestChanged>((event, emit) {
+      emit(state.copyWith(interests: event.interests));
+    });
     on<_CreateProfile>((event, emit) async {
       late Either<AuthFailure, Profile> failureOption;
       final nameValid = state.form.name!.isValid();
@@ -86,6 +89,15 @@ class ProfileFormBloc extends Bloc<ProfileFormEvent, ProfileFormState> {
             isSubmitting: false,
             createProfileFailureOption: some(failureOption)));
       }
+    });
+    on<_UpdateInterests>((event, emit) async {
+      late Either<AuthFailure, Profile> failureOption;
+      emit(state.copyWith(
+          isSubmitting: true, createProfileFailureOption: none()));
+      failureOption = await _repository.updateInterest(state.interests);
+      emit(state.copyWith(
+          isSubmitting: false,
+          createProfileFailureOption: some(failureOption)));
     });
   }
 }

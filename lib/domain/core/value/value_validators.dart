@@ -1,7 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:youapp_test/domain/core/failure/failure.dart';
 
-import '../../../presentation/pages/about/helper/datetime_formatter.dart';
 
 Either<ValueFailure<String>, String> validateEmailAddress(String input) {
   const emailRegex =

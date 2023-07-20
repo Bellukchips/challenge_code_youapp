@@ -101,4 +101,24 @@ class ProfileRepository implements ProfileFacade {
       }
     }
   }
+
+  @override
+  Future<Either<AuthFailure, Profile>> updateInterest(
+      List<String> interests) async {
+    await Future.delayed(const Duration(milliseconds: 2000));
+    try {
+      Response response =
+          await _network.put('/updateProfile', data: {'interests': interests});
+      var result = response.data['data'];
+      return right(ProfileDto.fromJson(result).toDomain());
+    } on DioException catch (e) {
+      if (e.response != null) {
+        var message = e.response?.statusMessage.toString();
+        return left(AuthFailure.unexpected(message ?? ""));
+      } else {
+        // Something happened in setting up or sending the request that triggered an Error
+        return left(AuthFailure.unexpected('${e.message} ${e.error}'));
+      }
+    }
+  }
 }

@@ -7,4 +7,5 @@ abstract class ProfileFacade {
   Future<Either<AuthFailure, Profile>> getProfile();
   Future<Either<AuthFailure, Profile>> createProfile(ProfileForm form);
   Future<Either<AuthFailure, Profile>> updateProfile(ProfileForm form);
+  Future<Either<AuthFailure, Profile>> updateInterest(List<String> interests);
 }

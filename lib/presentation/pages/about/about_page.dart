@@ -229,6 +229,9 @@ class _AboutPageState extends State<AboutPage> {
                                     height: 20,
                                   ),
                                   const CardInterest(),
+                                  const SizedBox(
+                                    height: 100,
+                                  ),
                                 ],
                               ),
                             ),
@@ -249,53 +252,93 @@ class _AboutPageState extends State<AboutPage> {
 
 class CardInterest extends StatelessWidget {
   const CardInterest({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 120,
-      width: MediaQuery.sizeOf(context).width,
-      decoration: BoxDecoration(
-          color: ColorApp.darkCard, borderRadius: BorderRadius.circular(15)),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return BlocBuilder<ProfileBloc, ProfileState>(
+      builder: (context, state) {
+        return Container(
+          decoration: BoxDecoration(
+            color: ColorApp.darkCard,
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'Interest',
-                  style: FontApp.primaryStyle.copyWith(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Interest',
+                      style: FontApp.primaryStyle.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        getIt<AppRouter>().replace(const InterestRoute());
+                      },
+                      icon: const Icon(
+                        Icons.edit,
+                        size: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
-                IconButton(
-                    onPressed: () {
-                      getIt<AppRouter>().replace(const InterestRoute());
-                    },
-                    icon: const Icon(
-                      Icons.edit,
-                      size: 20,
-                      color: Colors.white,
-                    ))
+                const SizedBox(
+                  height: 20,
+                ),
+                state.maybeMap(
+                  orElse: () => Container(),
+                  loadSuccess: (value) {
+                    if (value.profile.interests!.isEmpty) {
+                      return Text(
+                        'Add in your interest to find a better match',
+                        style: FontApp.primaryStyle.copyWith(
+                          color: const Color.fromARGB(255, 151, 151, 151),
+                        ),
+                      );
+                    }
+                    return SizedBox(
+                      height: 50,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: value.profile.interests!.length,
+                        itemBuilder: (context, index) {
+                          final interest = value.profile.interests![index];
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 4,vertical: 4),
+                            child: Container(
+                              padding: const EdgeInsets.all(10),
+                              decoration: BoxDecoration(
+                                color: ColorApp.darkAccent,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              child: Text(
+                                interest,
+                                style: FontApp.primaryStyle.copyWith(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            Text(
-              'Add in your interest to find a better match',
-              style: FontApp.primaryStyle
-                  .copyWith(color: const Color.fromARGB(255, 151, 151, 151)),
-            )
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }
@@ -1180,9 +1223,8 @@ class TextEditAddWeight extends StatelessWidget {
             return Container();
           },
           loadSuccess: (valueState) {
-            context
-                .read<ProfileFormBloc>()
-                .add(ProfileFormEvent.weightChanged(valueState.profile.weight ?? 0));
+            context.read<ProfileFormBloc>().add(
+                ProfileFormEvent.weightChanged(valueState.profile.weight ?? 0));
             return SizedBox(
               width: MediaQuery.sizeOf(context).width - 400 / 2,
               height: 50,
@@ -1245,9 +1287,8 @@ class TextEditAddHeight extends StatelessWidget {
         return state.maybeMap(
           orElse: () => Container(),
           loadSuccess: (valueState) {
-            context
-                .read<ProfileFormBloc>()
-                .add(ProfileFormEvent.heightChanged(valueState.profile.height ?? 0));
+            context.read<ProfileFormBloc>().add(
+                ProfileFormEvent.heightChanged(valueState.profile.height ?? 0));
             return SizedBox(
               width: MediaQuery.sizeOf(context).width - 400 / 2,
               height: 50,
